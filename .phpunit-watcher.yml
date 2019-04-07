@@ -1,0 +1,5 @@
+watch:
+  directories:
+    - exercises
+    - tests
+  fileMask: '*.php'

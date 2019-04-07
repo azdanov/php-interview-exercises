@@ -1,0 +1,24 @@
+{
+  "name": "azdanov/questions",
+  "description": "Exercises to prepare for an interview",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Anton Zdanov",
+      "email": "azdanov@pm.me"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^8.1",
+    "codedungeon/phpunit-result-printer": "^0.26.2",
+    "spatie/phpunit-watcher": "^1.8"
+  },
+  "autoload": {
+    "classmap": [
+      "exercises/"
+    ]
+  }
+}
