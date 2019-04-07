@@ -1,4 +1,4 @@
-# Coding Questions
+# Coding Questions · [![Build Status](https://travis-ci.com/azdanov/questions.svg?branch=master)](https://travis-ci.com/azdanov/questions)
 
 A number of exercises to practice 'whiteboard' interview questions in PHP.
 
