@@ -1,0 +1,17 @@
+language: php
+
+php:
+  - 7.3
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - composer self-update
+
+install:
+  - travis_retry composer install --prefer-dist --no-interaction --optimize-autoloader --no-suggest
+
+script:
+  - vendor/bin/phpunit
