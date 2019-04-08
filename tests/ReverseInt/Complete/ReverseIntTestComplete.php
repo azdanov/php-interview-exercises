@@ -9,6 +9,11 @@ use PHPUnit\Framework\TestCase;
 
 final class ReverseIntTestComplete extends TestCase
 {
+    public function testCanReverseIntZero(): void
+    {
+        $this->assertSame(0, ReverseIntComplete::reverse(0));
+    }
+
     public function testCanReverseInt(): void
     {
         $this->assertSame(21, ReverseIntComplete::reverse(12));
