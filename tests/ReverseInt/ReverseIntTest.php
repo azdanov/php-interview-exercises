@@ -6,9 +6,18 @@ namespace Tests\ReverseInt;
 
 use Exercises\ReverseInt\ReverseInt;
 use PHPUnit\Framework\TestCase;
+use function method_exists;
 
 final class ReverseIntTest extends TestCase
 {
+    public function testHasCheck(): void
+    {
+        $this->assertTrue(
+            method_exists(ReverseInt::class, 'reverse'),
+            'Class does not have static method reverse'
+        );
+    }
+
     public function testCanReverseInt(): void
     {
         static::markTestSkipped();

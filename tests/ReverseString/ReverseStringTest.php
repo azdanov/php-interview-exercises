@@ -6,9 +6,18 @@ namespace Tests\ReverseString;
 
 use Exercises\ReverseString\ReverseString;
 use PHPUnit\Framework\TestCase;
+use function method_exists;
 
 final class ReverseStringTest extends TestCase
 {
+    public function testHasCheck(): void
+    {
+        $this->assertTrue(
+            method_exists(ReverseString::class, 'reverse'),
+            'Class does not have static method reverse'
+        );
+    }
+
     public function testCanReverseString(): void
     {
         static::markTestSkipped();

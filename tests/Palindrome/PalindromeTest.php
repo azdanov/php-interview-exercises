@@ -6,9 +6,18 @@ namespace Tests\Palindrome;
 
 use Exercises\Palindrome\Palindrome;
 use PHPUnit\Framework\TestCase;
+use function method_exists;
 
 final class PalindromeTest extends TestCase
 {
+    public function testHasCheck(): void
+    {
+        $this->assertTrue(
+            method_exists(Palindrome::class, 'check'),
+            'Class does not have static method check'
+        );
+    }
+
     public function testFafIsPalindrome(): void
     {
         static::markTestSkipped();
