@@ -20,9 +20,9 @@ This will allow you to write code and be sure that the solution is correct.
 
 ## Suggested Path
 
-* ReverseOrder
-* Palindrome
-
+* [ReverseString](./exercises/ReverseString/ReverseString.php)
+* [Palindrome](./exercises/Palindrome/Palindrome.php)
+* [ReverseInt](./exercises/ReverseInt/ReverseInt.php)
 
 ## License
 

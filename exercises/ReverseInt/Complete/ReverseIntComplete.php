@@ -9,11 +9,11 @@ use function strrev;
 /**
  * Given an integer reverse its digits.
  *
- * @example ReverseInt::reverse(12)  === 21
- * @example ReverseInt::reverse(123)  === 321
- * @example ReverseInt::reverse(300)  === 3
- * @example ReverseInt::reverse(-12)  === -21
- * @example ReverseInt::reverse(-120)  === -21
+ * @example ReverseInt::reverse(12) === 21
+ * @example ReverseInt::reverse(123) === 321
+ * @example ReverseInt::reverse(300) === 3
+ * @example ReverseInt::reverse(-12) === -21
+ * @example ReverseInt::reverse(-120) === -21
  */
 final class ReverseIntComplete
 {
