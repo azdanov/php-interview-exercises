@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace tests;
+namespace Tests\ReverseString;
 
 use Exercises\ReverseString\ReverseString;
 use PHPUnit\Framework\TestCase;

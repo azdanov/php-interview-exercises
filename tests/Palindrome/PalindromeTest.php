@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace tests;
+namespace Tests\Palindrome;
 
 use Exercises\Palindrome\Palindrome;
 use PHPUnit\Framework\TestCase;
