@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace exercises\ReverseString\complete;
+namespace Exercises\ReverseString\Complete;
 
 use function array_reduce;
 use function array_reverse;

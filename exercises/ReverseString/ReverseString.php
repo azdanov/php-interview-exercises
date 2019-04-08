@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace exercises\ReverseString;
+namespace Exercises\ReverseString;
 
 /**
  * Given a string reverse it.

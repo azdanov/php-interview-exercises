@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace tests\complete;
 
-use exercises\ReverseString\complete\ReverseStringComplete;
+use Exercises\ReverseString\Complete\ReverseStringComplete;
 use PHPUnit\Framework\TestCase;
 
 final class ReverseStringTestComplete extends TestCase

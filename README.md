@@ -1,4 +1,4 @@
-# Coding Questions · [![Build Status](https://travis-ci.com/azdanov/questions.svg?branch=master)](https://travis-ci.com/azdanov/questions)
+# Coding Questions · [![Build Status](https://travis-ci.com/azdanov/questions.svg?branch=master)](https://travis-ci.com/azdanov/questions) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/azdanov/questions/blob/master/LICENSE)
 
 A number of exercises to practice 'whiteboard' interview questions in PHP.
 
@@ -18,9 +18,10 @@ There are multiple ways to solve each problem, feel free to experiment.
 
 This will allow you to write code and be sure that the solution is correct.
 
-## Order ( Simple -> Difficult )
+## Suggested Path
 
-1. ReverseOrder
+* ReverseOrder
+* Palindrome
 
 
 ## License

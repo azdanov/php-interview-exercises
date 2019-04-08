@@ -103,3 +103,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 .phpunit.result.cache
+.DS_Store

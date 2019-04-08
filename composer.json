@@ -9,7 +9,6 @@
       "email": "azdanov@pm.me"
     }
   ],
-  "minimum-stability": "stable",
   "require": {},
   "require-dev": {
     "phpunit/phpunit": "^8.1",
@@ -17,8 +16,8 @@
     "spatie/phpunit-watcher": "^1.8"
   },
   "autoload": {
-    "classmap": [
-      "exercises/"
-    ]
+    "psr-4": {
+      "Exercises\\": "exercises/"
+    }
   }
 }
