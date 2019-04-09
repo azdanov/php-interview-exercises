@@ -24,6 +24,7 @@ This will allow you to write code and be sure that the solution is correct.
 * [Palindrome](./exercises/Palindrome/Palindrome.php)
 * [ReverseInt](./exercises/ReverseInt/ReverseInt.php)
 * [MaxChar](./exercises/MaxChar/MaxChar.php)
+* [FizzBuzz](./exercises/FizzBuzz/FizzBuzz.php)
 
 ## License
 

@@ -10,7 +10,7 @@ use function method_exists;
 
 final class MaxCharTestComplete extends TestCase
 {
-    public function testHasCheck(): void
+    public function testHasGet(): void
     {
         $this->assertTrue(
             method_exists(MaxCharComplete::class, 'get'),
