@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Tests\MaxChar;
 
-use Exercises\Ladder\Ladder;
+use Exercises\Pyramid\Pyramid;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-final class LadderTest extends TestCase
+final class PyramidTest extends TestCase
 {
     public function testHasPrint(): void
     {
         $this->assertTrue(
-            method_exists(Ladder::class, 'print'),
+            method_exists(Pyramid::class, 'print'),
             'Class does not have static method print'
         );
     }
@@ -28,14 +28,14 @@ final class LadderTest extends TestCase
     public function testPrintLadder1(): void
     {
         self::markTestSkipped();
-        $this->expectOutputString('# ##');
+        $this->expectOutputString(' # ###');
         Pyramid::print(2);
     }
 
     public function testPrintLadder2(): void
     {
         self::markTestSkipped();
-        $this->expectOutputString('#    ##   ###  #### #####');
+        $this->expectOutputString('    #       ###     #####   ####### #########');
         Pyramid::print(5);
     }
 }
