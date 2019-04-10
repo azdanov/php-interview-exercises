@@ -20,14 +20,15 @@ This will allow you to write code and be sure that the solution is correct.
 
 ## Suggested Path
 
-* [ReverseString](./exercises/ReverseString/ReverseString.php)
-* [Palindrome](./exercises/Palindrome/Palindrome.php)
-* [ReverseInt](./exercises/ReverseInt/ReverseInt.php)
-* [MaxChar](./exercises/MaxChar/MaxChar.php)
 * [FizzBuzz](./exercises/FizzBuzz/FizzBuzz.php)
+* [ReverseString](./exercises/ReverseString/ReverseString.php)
+* [ReverseInt](./exercises/ReverseInt/ReverseInt.php)
+* [Palindrome](./exercises/Palindrome/Palindrome.php)
+* [MaxChar](./exercises/MaxChar/MaxChar.php)
 * [ArrayGroup](./exercises/ArrayGroup/ArrayGroup.php)
-* [Anagram](./exercises/Anagram/Anagram.php)
 * [Capitalize](./exercises/Capitalize/Capitalize.php)
+* [Vowels](./exercises/Vowels/Vowels.php)
+* [Anagram](./exercises/Anagram/Anagram.php)
 * [Ladder](./exercises/Ladder/Ladder.php)
 * [Pyramid](./exercises/Pyramid/Pyramid.php)
 
