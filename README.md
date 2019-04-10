@@ -31,6 +31,7 @@ This will allow you to write code and be sure that the solution is correct.
 * [Anagram](./exercises/Anagram/Anagram.php)
 * [Ladder](./exercises/Ladder/Ladder.php)
 * [Pyramid](./exercises/Pyramid/Pyramid.php)
+* [Spiral](./exercises/Spiral/Spiral.php)
 
 ## License
 
