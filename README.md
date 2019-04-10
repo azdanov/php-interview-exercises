@@ -27,6 +27,7 @@ This will allow you to write code and be sure that the solution is correct.
 * [FizzBuzz](./exercises/FizzBuzz/FizzBuzz.php)
 * [ArrayGroup](./exercises/ArrayGroup/ArrayGroup.php)
 * [Anagram](./exercises/Anagram/Anagram.php)
+* [Capitalize](./exercises/Capitalize/Capitalize.php)
 
 ## License
 
