@@ -14,8 +14,8 @@ final class AnagramComplete
 {
     public static function check(string $first, string $second): bool
     {
-        $first = static::normalizeAndSort($first);
-        $second = static::normalizeAndSort($second);
+        $first = self::normalizeAndSort($first);
+        $second = self::normalizeAndSort($second);
 
         return $first === $second;
     }

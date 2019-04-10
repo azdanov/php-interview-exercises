@@ -28,6 +28,7 @@ This will allow you to write code and be sure that the solution is correct.
 * [ArrayGroup](./exercises/ArrayGroup/ArrayGroup.php)
 * [Anagram](./exercises/Anagram/Anagram.php)
 * [Capitalize](./exercises/Capitalize/Capitalize.php)
+* [Ladder](./exercises/Ladder/Ladder.php)
 
 ## License
 
