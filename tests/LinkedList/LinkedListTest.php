@@ -458,4 +458,25 @@ class LinkedListTest extends TestCase
 
         self::assertFalse(LinkedList::circular($list));
     }
+
+    public function testFromLastEmpty(): void
+    {
+        self::markTestSkipped();
+        self::assertNull(LinkedList::fromLast($this->list, 2));
+    }
+
+    public function testFromLast(): void
+    {
+        self::markTestSkipped();
+        $this->list->insertLast(1);
+        $this->list->insertLast(2);
+        $this->list->insertLast(3);
+        $this->list->insertLast(4);
+        $this->list->insertLast(5);
+        $this->list->insertLast(6);
+
+        $fromLast = LinkedList::fromLast($this->list, 1);
+
+        self::assertSame(5, $fromLast->data);
+    }
 }

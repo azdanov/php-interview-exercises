@@ -336,7 +336,7 @@ class LinkedListCompleteTest extends TestCase
 
         $midpoint = LinkedListComplete::midpoint($this->list);
 
-        self::assertEquals(1, $midpoint->data);
+        self::assertSame(1, $midpoint->data);
     }
 
     public function testMidpointTwo(): void
@@ -346,7 +346,7 @@ class LinkedListCompleteTest extends TestCase
 
         $midpoint = LinkedListComplete::midpoint($this->list);
 
-        self::assertEquals(1, $midpoint->data);
+        self::assertSame(1, $midpoint->data);
     }
 
     public function testMidpointOdd(): void
@@ -357,7 +357,7 @@ class LinkedListCompleteTest extends TestCase
 
         $midpoint = LinkedListComplete::midpoint($this->list);
 
-        self::assertEquals(2, $midpoint->data);
+        self::assertSame(2, $midpoint->data);
     }
 
     public function testMidpointEven(): void
@@ -371,7 +371,7 @@ class LinkedListCompleteTest extends TestCase
 
         $midpoint = LinkedListComplete::midpoint($this->list);
 
-        self::assertEquals(3, $midpoint->data);
+        self::assertSame(3, $midpoint->data);
     }
 
     public function testCircularEmpty(): void
@@ -422,5 +422,24 @@ class LinkedListCompleteTest extends TestCase
         $c->next = null;
 
         self::assertFalse(LinkedListComplete::circular($list));
+    }
+
+    public function testFromLastEmpty(): void
+    {
+        self::assertNull(LinkedListComplete::fromLast($this->list, 2));
+    }
+
+    public function testFromLast(): void
+    {
+        $this->list->insertLast(1);
+        $this->list->insertLast(2);
+        $this->list->insertLast(3);
+        $this->list->insertLast(4);
+        $this->list->insertLast(5);
+        $this->list->insertLast(6);
+
+        $fromLast = LinkedListComplete::fromLast($this->list, 1);
+
+        self::assertSame(5, $fromLast->data);
     }
 }

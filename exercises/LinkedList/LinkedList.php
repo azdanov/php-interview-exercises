@@ -48,6 +48,16 @@ class LinkedList implements Iterator
     }
 
     /**
+     * Return a node that is located n places from the end.
+     *
+     * Do not use size, and assume that n is always less than
+     * the list length.
+     */
+    public static function fromLast(self $list, int $n): ?Node
+    {
+    }
+
+    /**
      * Create a new Node from data and assign the node to the head property.
      *
      * @param mixed $data

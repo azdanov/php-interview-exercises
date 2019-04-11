@@ -8,10 +8,10 @@ use Iterator;
 
 class LinkedListComplete implements Iterator
 {
-    /** @var int */
-    private $position = 0;
     /** @var NodeComplete|null */
     public $head;
+    /** @var int */
+    private $position = 0;
 
     public function __construct()
     {
@@ -232,5 +232,27 @@ class LinkedListComplete implements Iterator
         }
 
         return false;
+    }
+
+    public static function fromLast(self $list, int $n): ?NodeComplete
+    {
+        $current = $list->head;
+
+        if (!$current) {
+            return null;
+        }
+
+        $sentinel = $list->head;
+
+        while ($n-- > 0) {
+            $sentinel = $sentinel->next;
+        }
+
+        while ($sentinel->next) {
+            $current = $current->next;
+            $sentinel = $sentinel->next;
+        }
+
+        return $current;
     }
 }
