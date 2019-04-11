@@ -158,4 +158,15 @@ class LinkedList implements Iterator
     public function rewind(): void
     {
     }
+
+    /**
+     * Return a middle node without using counters or size.
+     * Only iteration is allowed.
+     *
+     * When list has even number of items, return the
+     * last one from the first half.
+     */
+    public static function midpoint(LinkedList $list): ?Node
+    {
+    }
 }

@@ -197,4 +197,20 @@ class LinkedListComplete implements Iterator
     {
         $this->position = 0;
     }
+
+    public static function midpoint(self $list): ?NodeComplete
+    {
+        $current = $list->head;
+        if (!$current) {
+            return $current;
+        }
+
+        $sentinel = $list->head;
+        while ($sentinel->next && $sentinel->next->next) {
+            $current = $current->next;
+            $sentinel = $sentinel->next->next;
+        }
+
+        return $current;
+    }
 }

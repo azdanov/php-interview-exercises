@@ -348,4 +348,60 @@ class LinkedListTest extends TestCase
         }
         self::assertTrue(true);
     }
+
+    public function testMidpointEmpty(): void
+    {
+        self::markTestSkipped();
+        $midpoint = LinkedList::midpoint($this->list);
+
+        self::assertNull($midpoint);
+    }
+
+    public function testMidpointOne(): void
+    {
+        self::markTestSkipped();
+        $this->list->insertLast(1);
+
+        $midpoint = LinkedList::midpoint($this->list);
+
+        self::assertSame(1, $midpoint->data);
+    }
+
+    public function testMidpointTwo(): void
+    {
+        self::markTestSkipped();
+        $this->list->insertLast(1);
+        $this->list->insertLast(2);
+
+        $midpoint = LinkedList::midpoint($this->list);
+
+        self::assertSame(1, $midpoint->data);
+    }
+
+    public function testMidpointOdd(): void
+    {
+        self::markTestSkipped();
+        $this->list->insertLast(1);
+        $this->list->insertLast(2);
+        $this->list->insertLast(3);
+
+        $midpoint = LinkedList::midpoint($this->list);
+
+        self::assertSame(2, $midpoint->data);
+    }
+
+    public function testMidpointEven(): void
+    {
+        self::markTestSkipped();
+        $this->list->insertLast(1);
+        $this->list->insertLast(2);
+        $this->list->insertLast(3);
+        $this->list->insertLast(4);
+        $this->list->insertLast(5);
+        $this->list->insertLast(6);
+
+        $midpoint = LinkedList::midpoint($this->list);
+
+        self::assertSame(3, $midpoint->data);
+    }
 }
