@@ -63,6 +63,11 @@ final class StackTestComplete extends TestCase
         $this->assertNull($this->stack->peek());
         $this->stack->push(1);
         $this->stack->push(2);
-        $this->assertSame(2, $this->stack->peek());
+        $this->stack->push(3);
+
+        $this->stack->pop();
+        $this->stack->push(1);
+
+        self::assertSame(1, $this->stack->peek());
     }
 }

@@ -69,6 +69,7 @@ final class QueueFromStacksTestComplete extends TestCase
         $this->queue->add(3);
 
         $this->queue->remove();
+        $this->queue->add(1);
 
         self::assertSame(2, $this->queue->peek());
     }

@@ -9,39 +9,51 @@ use Exercises\Stack\Complete\StackComplete;
 final class QueueFromStacksComplete
 {
     /** @var StackComplete () */
-    private $receiver;
-    /** @var StackComplete () */
     private $storage;
+    /** @var StackComplete () */
+    private $temporary;
 
     public function __construct()
     {
-        $this->receiver = new StackComplete();
         $this->storage = new StackComplete();
+        $this->temporary = new StackComplete();
     }
 
     /** @param mixed $value */
     public function add($value): void
     {
-        $this->receiver->push($value);
+        $this->storage->push($value);
     }
 
     /** @return mixed|null */
     public function remove()
     {
-        while ($this->receiver->peek()) {
-            $this->storage->push($this->receiver->pop());
+        while ($this->storage->peek()) {
+            $this->temporary->push($this->storage->pop());
         }
 
-        return $this->storage->pop();
+        $item = $this->temporary->pop();
+
+        while ($this->temporary->peek()) {
+            $this->storage->push($this->temporary->pop());
+        }
+
+        return $item;
     }
 
     /** @return mixed|null */
     public function peek()
     {
-        while ($this->receiver->peek()) {
-            $this->storage->push($this->receiver->pop());
+        while ($this->storage->peek()) {
+            $this->temporary->push($this->storage->pop());
         }
 
-        return $this->storage->peek();
+        $item = $this->temporary->peek();
+
+        while ($this->temporary->peek()) {
+            $this->storage->push($this->temporary->pop());
+        }
+
+        return $item;
     }
 }
