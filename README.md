@@ -34,6 +34,7 @@ This will allow you to write code and be sure that the solution is correct.
 * [Spiral](./exercises/Spiral/Spiral.php)
 * [Fibonacci](./exercises/Fibonacci/Fibonacci.php)
 * [Queue](./exercises/Queue/Queue.php)
+* [Stack](./exercises/Stack/Stack.php)
 
 ## License
 
