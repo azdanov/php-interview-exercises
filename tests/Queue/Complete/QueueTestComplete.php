@@ -22,11 +22,19 @@ final class QueueTestComplete extends TestCase
     {
         $this->assertTrue(
             method_exists(QueueComplete::class, 'add'),
-            'Class does not have static method add'
+            'Class does not have method add'
         );
         $this->assertTrue(
             method_exists(QueueComplete::class, 'remove'),
-            'Class does not have static method remove'
+            'Class does not have method remove'
+        );
+        $this->assertTrue(
+            method_exists(QueueComplete::class, 'peek'),
+            'Class does not have method peek'
+        );
+        $this->assertTrue(
+            method_exists(QueueComplete::class, 'zip'),
+            'Class does not have static method zip'
         );
     }
 

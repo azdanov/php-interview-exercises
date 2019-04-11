@@ -4,38 +4,33 @@ declare(strict_types=1);
 
 namespace Tests\Queue;
 
-use Exercises\Queue\Queue;
+use Exercises\QueueFromStacks\QueueFromStacks;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-final class QueueTest extends TestCase
+final class QueueFromStacksTest extends TestCase
 {
-    /** @var Queue */
+    /** @var QueueFromStacks */
     private $queue;
 
     protected function setUp(): void
     {
-        $this->queue = new Queue();
+        $this->queue = new QueueFromStacks();
     }
 
     public function testHasMethods(): void
     {
         self::markTestSkipped();
         $this->assertTrue(
-            method_exists(Queue::class, 'add'),
-            'Class does not have method add'
+            method_exists(QueueFromStacks::class, 'add'),
+            'Class does not have static method add'
         );
         $this->assertTrue(
-            method_exists(Queue::class, 'remove'),
-            'Class does not have method remove'
-        );
-        $this->assertTrue(
-            method_exists(Queue::class, 'peek'),
-            'Class does not have method peek'
-        );
-        $this->assertTrue(
-            method_exists(Queue::class, 'zip'),
-            'Class does not have static method zip'
+            method_exists(QueueFromStacks::class, 'remove'),
+            'Class does not have static method remove'
+        );        $this->assertTrue(
+            method_exists(QueueFromStacks::class, 'peek'),
+            'Class does not have static method peek'
         );
     }
 
@@ -76,29 +71,5 @@ final class QueueTest extends TestCase
         $this->queue->remove();
 
         self::assertSame(2, $this->queue->peek());
-    }
-
-    public function testCanZip(): void
-    {
-        self::markTestSkipped();
-        $queue1 = new Queue();
-        $queue2 = new Queue();
-
-        $queue1->add(1);
-        $queue1->add(2);
-        $queue1->add(3);
-        $queue1->add(4);
-        $queue2->add('a');
-        $queue2->add('b');
-
-        $queue3 = Queue::zip($queue1, $queue2);
-
-        self::assertSame(1, $queue3->remove());
-        self::assertSame('a', $queue3->remove());
-        self::assertSame(2, $queue3->remove());
-        self::assertSame('b', $queue3->remove());
-        self::assertSame(3, $queue3->remove());
-        self::assertSame(4, $queue3->remove());
-        self::assertNull($queue3->remove());
     }
 }

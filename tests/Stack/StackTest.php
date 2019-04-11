@@ -23,11 +23,15 @@ final class StackTest extends TestCase
         self::markTestSkipped();
         $this->assertTrue(
             method_exists(Stack::class, 'push'),
-            'Class does not have static method push'
+            'Class does not have method push'
         );
         $this->assertTrue(
             method_exists(Stack::class, 'pop'),
-            'Class does not have static method pop'
+            'Class does not have method pop'
+        );
+        $this->assertTrue(
+            method_exists(Stack::class, 'peek'),
+            'Class does not have method peek'
         );
     }
 

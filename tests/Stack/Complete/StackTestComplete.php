@@ -22,11 +22,15 @@ final class StackTestComplete extends TestCase
     {
         $this->assertTrue(
             method_exists(StackComplete::class, 'push'),
-            'Class does not have static method push'
+            'Class does not have method push'
         );
         $this->assertTrue(
             method_exists(StackComplete::class, 'pop'),
-            'Class does not have static method pop'
+            'Class does not have method pop'
+        );
+        $this->assertTrue(
+            method_exists(StackComplete::class, 'peek'),
+            'Class does not have method peek'
         );
     }
 
