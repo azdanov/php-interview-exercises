@@ -21,81 +21,84 @@ class LinkedListTest extends TestCase
     public function testInsertFirst(): void
     {
         self::markTestSkipped();
+        $this->list->insertFirst(0);
         $this->list->insertFirst(1);
         $this->list->insertFirst(2);
-        $this->list->insertFirst('a');
 
-        self::assertTrue(true);
+        self::assertSame(2, $this->list->head->data);
+        self::assertSame(1, $this->list->head->next->data);
+        self::assertSame(0, $this->list->head->next->next->data);
     }
 
     public function testInsertLast(): void
     {
         self::markTestSkipped();
         $this->list->insertLast(0);
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
+        $this->list->insertLast(1);
+        $this->list->insertLast(2);
 
-        self::assertTrue(true);
+        self::assertSame(0, $this->list->head->data);
+        self::assertSame(1, $this->list->head->next->data);
+        self::assertSame(2, $this->list->head->next->next->data);
     }
 
     public function testSize(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertLast('a');
+        $this->list->head = new Node(0, new Node(1));
 
         self::assertSame(2, $this->list->size());
     }
 
-    public function testGetFirstAndInsertFirst(): void
+    public function testGetFirst(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst('a');
+        $this->list->head = new Node(0, new Node(1));
 
         $first = $this->list->getFirst();
-        self::assertSame('a', $first->data);
+        self::assertSame(0, $first->data);
         self::assertInstanceOf(Node::class, $first->next);
         self::assertSame(1, $first->next->data);
     }
 
-    public function testGetLastAndInsertLast(): void
+    public function testGetLast(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst('a');
-        $this->list->insertLast(0);
+        $this->list->head = new Node(0, new Node(1));
 
         $last = $this->list->getLast();
-        self::assertSame(0, $last->data);
+        self::assertSame(1, $last->data);
         self::assertNull($last->next);
     }
 
     public function testClear(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
+        $this->list->head = new Node(0, new Node(1));
 
         $this->list->clear();
 
-        $last = $this->list->getLast();
+        $last = $this->list->head;
         self::assertNull($last);
     }
 
     public function testRemoveFirst(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(2)
+            )
+        );
 
         $this->list->removeFirst();
 
-        $first = $this->list->getFirst();
-        self::assertSame(2, $first->data);
+        $first = $this->list->head;
+        self::assertSame(1, $first->data);
         self::assertInstanceOf(Node::class, $first->next);
-        self::assertSame(1, $first->next->data);
+        self::assertSame(2, $first->next->data);
     }
 
     public function testRemoveFirstEmpty(): void
@@ -108,13 +111,19 @@ class LinkedListTest extends TestCase
     public function testRemoveLast(): void
     {
         self::markTestSkipped();
-        $this->list->insertLast(1);
-        $this->list->insertLast(2);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(2)
+            )
+        );
+
         $this->list->removeLast();
 
-        $first = $this->list->getLast();
-        self::assertSame(1, $first->data);
-        self::assertNull($first->next);
+        $last = $this->list->head->next;
+        self::assertSame(1, $last->data);
+        self::assertNull($last->next);
     }
 
     public function testRemoveLastEmpty(): void
@@ -127,15 +136,19 @@ class LinkedListTest extends TestCase
     public function testGetAt(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(2)
+            )
+        );
 
         $first = $this->list->getAt(0);
-        self::assertSame(3, $first->data);
+        self::assertSame(0, $first->data);
 
         $last = $this->list->getAt(2);
-        self::assertSame(1, $last->data);
+        self::assertSame(2, $last->data);
     }
 
     public function testGetAtEmpty(): void
@@ -160,62 +173,80 @@ class LinkedListTest extends TestCase
     public function testRemoveAtOutOfBound(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
+        $this->list->head = new Node(0);
 
         $this->list->removeAt(1);
 
-        $first = $this->list->getFirst();
+        $first = $this->list->head;
         self::assertNull($first);
     }
 
     public function testRemoveAtFirst(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
-        $first = $this->list->getFirst();
-        self::assertSame(4, $first->data);
+        $first = $this->list->head;
+        self::assertSame(0, $first->data);
 
         $this->list->removeAt(0);
 
-        $first = $this->list->getFirst();
-        self::assertSame(3, $first->data);
+        $first = $this->list->head;
+        self::assertSame(1, $first->data);
     }
 
     public function testRemoveAtIndex(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
-        $first = $this->list->getAt(1);
-        self::assertSame(3, $first->data);
+        $first = $this->list->head->next;
+        self::assertSame(1, $first->data);
 
         $this->list->removeAt(0);
 
-        $first = $this->list->getAt(1);
+        $first = $this->list->head->next;
         self::assertSame(2, $first->data);
     }
 
     public function testRemoveAtLast(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
-        $first = $this->list->getLast();
-        self::assertSame(1, $first->data);
+        $first = $this->list->head->next->next->next;
+        self::assertSame(3, $first->data);
 
         $this->list->removeAt(3);
 
-        $first = $this->list->getLast();
+        $first = $this->list->head->next->next;
         self::assertSame(2, $first->data);
     }
 
@@ -224,87 +255,115 @@ class LinkedListTest extends TestCase
         self::markTestSkipped();
         $this->list->insertAt('a', 0);
 
-        self::assertSame('a', $this->list->getFirst()->data);
+        self::assertSame('a', $this->list->head->data);
     }
 
     public function testInsertAtNegativeOutOfBound(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
         $this->list->insertAt('a', -10);
 
-        self::assertSame('a', $this->list->getAt(0)->data);
-        self::assertSame(4, $this->list->getAt(1)->data);
+        self::assertSame('a', $this->list->head->data);
+        self::assertSame(0, $this->list->head->next->data);
     }
 
     public function testInsertAt0(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
         $this->list->insertAt('a', 0);
 
-        self::assertSame('a', $this->list->getAt(0)->data);
-        self::assertSame(4, $this->list->getAt(1)->data);
+        self::assertSame('a', $this->list->head->data);
+        self::assertSame(0, $this->list->head->next->data);
     }
 
     public function testInsertAtMiddle(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
         $this->list->insertAt('a', 2);
 
-        self::assertSame(4, $this->list->getAt(0)->data);
-        self::assertSame(3, $this->list->getAt(1)->data);
-        self::assertSame('a', $this->list->getAt(2)->data);
-        self::assertSame(2, $this->list->getAt(3)->data);
-        self::assertSame(1, $this->list->getAt(4)->data);
+        self::assertSame(0, $this->list->head->data);
+        self::assertSame(1, $this->list->head->next->data);
+        self::assertSame('a', $this->list->head->next->next->data);
+        self::assertSame(2, $this->list->head->next->next->next->data);
+        self::assertSame(3, $this->list->head->next->next->next->next->data);
     }
 
     public function testInsertAtLast(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
+        $this->list->head = new Node(
+            0,
+            new Node(1)
+        );
 
         $this->list->insertAt('hi', 2);
 
-        self::assertSame(2, $this->list->getAt(0)->data);
-        self::assertSame(1, $this->list->getAt(1)->data);
-        self::assertSame('hi', $this->list->getAt(2)->data);
+        self::assertSame(0, $this->list->head->data);
+        self::assertSame(1, $this->list->head->next->data);
+        self::assertSame('hi', $this->list->head->next->next->data);
     }
 
     public function testInsertAtOutOfBound(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
+        $this->list->head = new Node(
+            0,
+            new Node(1)
+        );
 
         $this->list->insertAt('hi', 20);
 
-        self::assertSame(2, $this->list->getAt(0)->data);
-        self::assertSame(1, $this->list->getAt(1)->data);
-        self::assertSame('hi', $this->list->getAt(2)->data);
+        self::assertSame(0, $this->list->head->data);
+        self::assertSame(1, $this->list->head->next->data);
+        self::assertSame('hi', $this->list->head->next->next->data);
     }
 
     public function testForEach(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
         $keys = [];
         $this->list->forEach(static function (&$data, $index) use (&$keys): void {
@@ -313,19 +372,25 @@ class LinkedListTest extends TestCase
         });
 
         self::assertSame([0, 1, 2, 3], $keys);
-        self::assertSame(40, $this->list->getAt(0)->data);
-        self::assertSame(30, $this->list->getAt(1)->data);
-        self::assertSame(20, $this->list->getAt(2)->data);
-        self::assertSame(10, $this->list->getAt(3)->data);
+        self::assertSame(0, $this->list->head->data);
+        self::assertSame(10, $this->list->head->next->data);
+        self::assertSame(20, $this->list->head->next->next->data);
+        self::assertSame(30, $this->list->head->next->next->next->data);
     }
 
     public function testForEachAs(): void
     {
         self::markTestSkipped();
-        $this->list->insertFirst(1);
-        $this->list->insertFirst(2);
-        $this->list->insertFirst(3);
-        $this->list->insertFirst(4);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
         $keys = [];
         foreach ($this->list as $key => $item) {
@@ -334,10 +399,10 @@ class LinkedListTest extends TestCase
         }
 
         self::assertSame([0, 1, 2, 3], $keys);
-        self::assertSame(40, $this->list->getAt(0)->data);
-        self::assertSame(30, $this->list->getAt(1)->data);
-        self::assertSame(20, $this->list->getAt(2)->data);
-        self::assertSame(10, $this->list->getAt(3)->data);
+        self::assertSame(0, $this->list->head->data);
+        self::assertSame(10, $this->list->head->next->data);
+        self::assertSame(20, $this->list->head->next->next->data);
+        self::assertSame(30, $this->list->head->next->next->next->data);
     }
 
     public function testForEachAsEmpty(): void
@@ -360,49 +425,59 @@ class LinkedListTest extends TestCase
     public function testMidpointOne(): void
     {
         self::markTestSkipped();
-        $this->list->insertLast(1);
+        $this->list->head = new Node(0);
 
         $midpoint = LinkedList::midpoint($this->list);
 
-        self::assertSame(1, $midpoint->data);
+        self::assertSame(0, $midpoint->data);
     }
 
     public function testMidpointTwo(): void
     {
         self::markTestSkipped();
-        $this->list->insertLast(1);
-        $this->list->insertLast(2);
+        $this->list->head = new Node(
+            0,
+            new Node(1)
+        );
+
+        $midpoint = LinkedList::midpoint($this->list);
+
+        self::assertSame(0, $midpoint->data);
+    }
+
+    public function testMidpointOdd(): void
+    {
+        self::markTestSkipped();
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(2)
+            )
+        );
 
         $midpoint = LinkedList::midpoint($this->list);
 
         self::assertSame(1, $midpoint->data);
     }
 
-    public function testMidpointOdd(): void
-    {
-        self::markTestSkipped();
-        $this->list->insertLast(1);
-        $this->list->insertLast(2);
-        $this->list->insertLast(3);
-
-        $midpoint = LinkedList::midpoint($this->list);
-
-        self::assertSame(2, $midpoint->data);
-    }
-
     public function testMidpointEven(): void
     {
         self::markTestSkipped();
-        $this->list->insertLast(1);
-        $this->list->insertLast(2);
-        $this->list->insertLast(3);
-        $this->list->insertLast(4);
-        $this->list->insertLast(5);
-        $this->list->insertLast(6);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
         $midpoint = LinkedList::midpoint($this->list);
 
-        self::assertSame(3, $midpoint->data);
+        self::assertSame(1, $midpoint->data);
     }
 
     public function testCircularEmpty(): void
@@ -468,15 +543,19 @@ class LinkedListTest extends TestCase
     public function testFromLast(): void
     {
         self::markTestSkipped();
-        $this->list->insertLast(1);
-        $this->list->insertLast(2);
-        $this->list->insertLast(3);
-        $this->list->insertLast(4);
-        $this->list->insertLast(5);
-        $this->list->insertLast(6);
+        $this->list->head = new Node(
+            0,
+            new Node(
+                1,
+                new Node(
+                    2,
+                    new Node(3)
+                )
+            )
+        );
 
         $fromLast = LinkedList::fromLast($this->list, 1);
 
-        self::assertSame(5, $fromLast->data);
+        self::assertSame(2, $fromLast->data);
     }
 }
