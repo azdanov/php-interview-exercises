@@ -10,7 +10,7 @@ use function method_exists;
 
 final class ReverseIntTest extends TestCase
 {
-    public function testHasCheck(): void
+    public function testHasReverse(): void
     {
         $this->assertTrue(
             method_exists(ReverseInt::class, 'reverse'),

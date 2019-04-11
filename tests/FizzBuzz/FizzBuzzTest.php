@@ -10,7 +10,7 @@ use function method_exists;
 
 final class FizzBuzzTest extends TestCase
 {
-    public function testHasCheck(): void
+    public function testHasPrint(): void
     {
         $this->assertTrue(
             method_exists(FizzBuzz::class, 'print'),

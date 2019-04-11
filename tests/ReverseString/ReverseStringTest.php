@@ -10,7 +10,7 @@ use function method_exists;
 
 final class ReverseStringTest extends TestCase
 {
-    public function testHasCheck(): void
+    public function testHasReverse(): void
     {
         $this->assertTrue(
             method_exists(ReverseString::class, 'reverse'),
