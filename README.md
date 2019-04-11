@@ -36,6 +36,8 @@ This will allow you to write code and be sure that the solution is correct.
 * [Queue](./exercises/Queue/Queue.php)
 * [Stack](./exercises/Stack/Stack.php)
 * [QueueFromStacks](./exercises/QueueFromStacks/QueueFromStacks.php)
+* [Node](./exercises/LinkedList/Node.php)
+* [LinkedList](./exercises/LinkedList/LinkedList.php)
 
 ## License
 

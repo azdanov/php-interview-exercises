@@ -11,17 +11,12 @@ final class SpiralTestComplete extends TestCase
 {
     public function testCanPrint1x1(): void
     {
-        self::assertEquals([
-            [1],
-        ], SpiralComplete::make(1));
+        self::assertEquals([[1]], SpiralComplete::make(1));
     }
 
     public function testCanPrint2x2(): void
     {
-        self::assertEquals([
-            [1, 2],
-            [4, 3],
-        ], SpiralComplete::make(2));
+        self::assertEquals([[1, 2], [4, 3]], SpiralComplete::make(2));
     }
 
     public function testCanPrint3x3(): void

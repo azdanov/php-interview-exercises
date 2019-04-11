@@ -12,7 +12,7 @@ final class CapitalizeTest extends TestCase
 {
     public function testHasGet(): void
     {
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(Capitalize::class, 'get'),
             'Class does not have static method get'
         );

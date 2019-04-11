@@ -21,14 +21,15 @@ final class QueueFromStacksTest extends TestCase
     public function testHasMethods(): void
     {
         self::markTestSkipped();
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(QueueFromStacks::class, 'add'),
             'Class does not have static method add'
         );
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(QueueFromStacks::class, 'remove'),
             'Class does not have static method remove'
-        );        $this->assertTrue(
+        );
+        self::assertTrue(
             method_exists(QueueFromStacks::class, 'peek'),
             'Class does not have static method peek'
         );
@@ -37,7 +38,7 @@ final class QueueFromStacksTest extends TestCase
     public function testCanCreateObject(): void
     {
         self::markTestSkipped();
-        $this->assertIsObject($this->queue);
+        self::assertIsObject($this->queue);
     }
 
     public function testCanAdd(): void
@@ -47,7 +48,7 @@ final class QueueFromStacksTest extends TestCase
         $this->queue->add(2);
         $this->queue->add(3);
 
-        $this->assertTrue(true);
+        self::assertTrue(true);
     }
 
     public function testCanRemove(): void

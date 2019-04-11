@@ -12,7 +12,7 @@ final class AnagramTest extends TestCase
 {
     public function testHasCheck(): void
     {
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(Anagram::class, 'check'),
             'Class does not have static method check'
         );

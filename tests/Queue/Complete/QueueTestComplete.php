@@ -20,19 +20,19 @@ final class QueueTestComplete extends TestCase
 
     public function testHasMethods(): void
     {
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(QueueComplete::class, 'add'),
             'Class does not have method add'
         );
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(QueueComplete::class, 'remove'),
             'Class does not have method remove'
         );
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(QueueComplete::class, 'peek'),
             'Class does not have method peek'
         );
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(QueueComplete::class, 'zip'),
             'Class does not have static method zip'
         );
@@ -40,7 +40,7 @@ final class QueueTestComplete extends TestCase
 
     public function testCanCreateObject(): void
     {
-        $this->assertIsObject($this->queue);
+        self::assertIsObject($this->queue);
     }
 
     public function testCanAdd(): void
@@ -49,7 +49,7 @@ final class QueueTestComplete extends TestCase
         $this->queue->add(2);
         $this->queue->add(3);
 
-        $this->assertTrue(true);
+        self::assertTrue(true);
     }
 
     public function testCanRemove(): void

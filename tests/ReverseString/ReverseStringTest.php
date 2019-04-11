@@ -12,7 +12,7 @@ final class ReverseStringTest extends TestCase
 {
     public function testHasReverse(): void
     {
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(ReverseString::class, 'reverse'),
             'Class does not have static method reverse'
         );
@@ -20,13 +20,13 @@ final class ReverseStringTest extends TestCase
 
     public function testCanReverseString(): void
     {
-        static::markTestSkipped();
-        $this->assertSame('ytrewq', ReverseString::reverse('qwerty'));
+        self::markTestSkipped();
+        self::assertSame('ytrewq', ReverseString::reverse('qwerty'));
     }
 
     public function testCanReverseStringWithWhitespace(): void
     {
-        static::markTestSkipped();
-        $this->assertSame('ytr ewq ', ReverseString::reverse(' qwe rty'));
+        self::markTestSkipped();
+        self::assertSame('ytr ewq ', ReverseString::reverse(' qwe rty'));
     }
 }

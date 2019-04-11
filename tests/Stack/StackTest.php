@@ -21,15 +21,15 @@ final class StackTest extends TestCase
     public function testHasMethods(): void
     {
         self::markTestSkipped();
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(Stack::class, 'push'),
             'Class does not have method push'
         );
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(Stack::class, 'pop'),
             'Class does not have method pop'
         );
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(Stack::class, 'peek'),
             'Class does not have method peek'
         );
@@ -38,7 +38,7 @@ final class StackTest extends TestCase
     public function testCanCreateObject(): void
     {
         self::markTestSkipped();
-        $this->assertIsObject($this->stack);
+        self::assertIsObject($this->stack);
     }
 
     public function testCanPush(): void
@@ -47,7 +47,7 @@ final class StackTest extends TestCase
         $this->stack->push(1);
         $this->stack->push(2);
         $this->stack->push(3);
-        $this->assertTrue(true);
+        self::assertTrue(true);
     }
 
     public function testCanPop(): void
@@ -56,10 +56,10 @@ final class StackTest extends TestCase
         $this->stack->push(1);
         $this->stack->push(2);
         $this->stack->push(3);
-        $this->assertSame(3, $this->stack->pop());
-        $this->assertSame(2, $this->stack->pop());
-        $this->assertSame(1, $this->stack->pop());
-        $this->assertNull($this->stack->pop());
+        self::assertSame(3, $this->stack->pop());
+        self::assertSame(2, $this->stack->pop());
+        self::assertSame(1, $this->stack->pop());
+        self::assertNull($this->stack->pop());
     }
 
     public function testCanPeek(): void

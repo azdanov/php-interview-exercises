@@ -12,7 +12,7 @@ final class PalindromeTest extends TestCase
 {
     public function testHasCheck(): void
     {
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(Palindrome::class, 'check'),
             'Class does not have static method check'
         );
@@ -20,43 +20,43 @@ final class PalindromeTest extends TestCase
 
     public function testFafIsPalindrome(): void
     {
-        static::markTestSkipped();
-        $this->assertTrue(Palindrome::check('faf'));
+        self::markTestSkipped();
+        self::assertTrue(Palindrome::check('faf'));
     }
 
     public function testFafSpaceIsNotAPalindrome(): void
     {
-        static::markTestSkipped();
-        $this->assertFalse(Palindrome::check('faf '));
+        self::markTestSkipped();
+        self::assertFalse(Palindrome::check('faf '));
     }
 
     public function testSpaceFafIsNotAPalindrome(): void
     {
-        static::markTestSkipped();
-        $this->assertFalse(Palindrome::check(' faf'));
+        self::markTestSkipped();
+        self::assertFalse(Palindrome::check(' faf'));
     }
 
     public function testHelloIsNotAPalindrome(): void
     {
-        static::markTestSkipped();
-        $this->assertFalse(Palindrome::check('hello'));
+        self::markTestSkipped();
+        self::assertFalse(Palindrome::check('hello'));
     }
 
     public function test11211IsAPalindrome(): void
     {
-        static::markTestSkipped();
-        $this->assertTrue(Palindrome::check('11211'));
+        self::markTestSkipped();
+        self::assertTrue(Palindrome::check('11211'));
     }
 
     public function testDogSpaceGodIsNotAPalindrome(): void
     {
-        static::markTestSkipped();
-        $this->assertFalse(Palindrome::check('Dog god'));
+        self::markTestSkipped();
+        self::assertFalse(Palindrome::check('Dog god'));
     }
 
     public function testDeifiedIsAPalindrome(): void
     {
-        static::markTestSkipped();
-        $this->assertTrue(Palindrome::check('deified'));
+        self::markTestSkipped();
+        self::assertTrue(Palindrome::check('deified'));
     }
 }

@@ -11,31 +11,31 @@ final class ReverseIntTestComplete extends TestCase
 {
     public function testCanReverseIntZero(): void
     {
-        $this->assertSame(0, ReverseIntComplete::reverse(0));
+        self::assertSame(0, ReverseIntComplete::reverse(0));
     }
 
     public function testCanReverseInt(): void
     {
-        $this->assertSame(21, ReverseIntComplete::reverse(12));
+        self::assertSame(21, ReverseIntComplete::reverse(12));
     }
 
     public function testCanReverseIntWithThreeDigits(): void
     {
-        $this->assertSame(321, ReverseIntComplete::reverse(123));
+        self::assertSame(321, ReverseIntComplete::reverse(123));
     }
 
     public function testCanReverseIntZeros(): void
     {
-        $this->assertSame(3, ReverseIntComplete::reverse(300));
+        self::assertSame(3, ReverseIntComplete::reverse(300));
     }
 
     public function testCanReverseIntNegative(): void
     {
-        $this->assertSame(-21, ReverseIntComplete::reverse(-12));
+        self::assertSame(-21, ReverseIntComplete::reverse(-12));
     }
 
     public function testCanReverseIntNegativeWithZeros(): void
     {
-        $this->assertSame(-21, ReverseIntComplete::reverse(-120));
+        self::assertSame(-21, ReverseIntComplete::reverse(-120));
     }
 }

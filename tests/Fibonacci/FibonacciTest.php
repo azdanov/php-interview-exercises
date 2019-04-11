@@ -12,7 +12,7 @@ final class FibonacciTest extends TestCase
 {
     public function testHasGet(): void
     {
-        $this->assertTrue(
+        self::assertTrue(
             method_exists(Fibonacci::class, 'get'),
             'Class does not have static method get'
         );
