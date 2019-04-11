@@ -18,6 +18,36 @@ class LinkedList implements Iterator
     }
 
     /**
+     * Return a middle node without using counters or size.
+     * Only iteration is allowed.
+     *
+     * When list has even number of items, return the
+     * last one from the first half.
+     */
+    public static function midpoint(self $list): ?Node
+    {
+    }
+
+    /**
+     * Given a linked list detect if there is a circular reference
+     * inside one of the nodes.
+     *
+     * $list = new LinkedList();
+     * $a = new Node('a');
+     * $b = new Node('b');
+     * $c = new Node('c');
+     *
+     * $list->head = $a;
+     * $a->next = $b;
+     * $b->next = $c;
+     * $c->next = $a;
+     * LinkedList::circular($list) === true
+     */
+    public static function circular(self $list): ?Node
+    {
+    }
+
+    /**
      * Create a new Node from data and assign the node to the head property.
      *
      * @param mixed $data
@@ -156,17 +186,6 @@ class LinkedList implements Iterator
      * @see https://php.net/manual/en/iterator.rewind.php
      */
     public function rewind(): void
-    {
-    }
-
-    /**
-     * Return a middle node without using counters or size.
-     * Only iteration is allowed.
-     *
-     * When list has even number of items, return the
-     * last one from the first half.
-     */
-    public static function midpoint(LinkedList $list): ?Node
     {
     }
 }

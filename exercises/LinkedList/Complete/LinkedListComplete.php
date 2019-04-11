@@ -11,7 +11,7 @@ class LinkedListComplete implements Iterator
     /** @var int */
     private $position = 0;
     /** @var NodeComplete|null */
-    private $head;
+    public $head;
 
     public function __construct()
     {
@@ -212,5 +212,25 @@ class LinkedListComplete implements Iterator
         }
 
         return $current;
+    }
+
+    public static function circular(self $list): bool
+    {
+        $current = $list->head;
+        if (!$current) {
+            return false;
+        }
+
+        $sentinel = $list->head;
+        while ($sentinel->next && $sentinel->next->next) {
+            $current = $current->next;
+            $sentinel = $sentinel->next->next;
+
+            if ($current === $sentinel) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -373,4 +373,54 @@ class LinkedListCompleteTest extends TestCase
 
         self::assertEquals(3, $midpoint->data);
     }
+
+    public function testCircularEmpty(): void
+    {
+        self::assertFalse(LinkedListComplete::circular($this->list));
+    }
+
+    public function testCircular(): void
+    {
+        $list = new LinkedListComplete();
+        $a = new NodeComplete('a');
+        $b = new NodeComplete('b');
+        $c = new NodeComplete('c');
+
+        $list->head = $a;
+        $a->next = $b;
+        $b->next = $c;
+        $c->next = $b;
+
+        self::assertTrue(LinkedListComplete::circular($list));
+    }
+
+    public function testCircularHead(): void
+    {
+        $list = new LinkedListComplete();
+        $a = new NodeComplete('a');
+        $b = new NodeComplete('b');
+        $c = new NodeComplete('c');
+
+        $list->head = $a;
+        $a->next = $b;
+        $b->next = $c;
+        $c->next = $a;
+
+        self::assertTrue(LinkedListComplete::circular($list));
+    }
+
+    public function testNonCircular(): void
+    {
+        $list = new LinkedListComplete();
+        $a = new NodeComplete('a');
+        $b = new NodeComplete('b');
+        $c = new NodeComplete('c');
+
+        $list->head = $a;
+        $a->next = $b;
+        $b->next = $c;
+        $c->next = null;
+
+        self::assertFalse(LinkedListComplete::circular($list));
+    }
 }

@@ -404,4 +404,58 @@ class LinkedListTest extends TestCase
 
         self::assertSame(3, $midpoint->data);
     }
+
+    public function testCircularEmpty(): void
+    {
+        self::markTestSkipped();
+        self::assertFalse(LinkedList::circular($this->list));
+    }
+
+    public function testCircular(): void
+    {
+        self::markTestSkipped();
+        $list = new LinkedList();
+        $a = new Node('a');
+        $b = new Node('b');
+        $c = new Node('c');
+
+        $list->head = $a;
+        $a->next = $b;
+        $b->next = $c;
+        $c->next = $b;
+
+        self::assertTrue(LinkedList::circular($list));
+    }
+
+    public function testCircularHead(): void
+    {
+        self::markTestSkipped();
+        $list = new LinkedList();
+        $a = new Node('a');
+        $b = new Node('b');
+        $c = new Node('c');
+
+        $list->head = $a;
+        $a->next = $b;
+        $b->next = $c;
+        $c->next = $a;
+
+        self::assertTrue(LinkedList::circular($list));
+    }
+
+    public function testNonCircular(): void
+    {
+        self::markTestSkipped();
+        $list = new LinkedList();
+        $a = new Node('a');
+        $b = new Node('b');
+        $c = new Node('c');
+
+        $list->head = $a;
+        $a->next = $b;
+        $b->next = $c;
+        $c->next = null;
+
+        self::assertFalse(LinkedList::circular($list));
+    }
 }
