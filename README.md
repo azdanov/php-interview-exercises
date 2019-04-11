@@ -33,6 +33,7 @@ This will allow you to write code and be sure that the solution is correct.
 * [Pyramid](./exercises/Pyramid/Pyramid.php)
 * [Spiral](./exercises/Spiral/Spiral.php)
 * [Fibonacci](./exercises/Fibonacci/Fibonacci.php)
+* [Queue](./exercises/Queue/Queue.php)
 
 ## License
 
