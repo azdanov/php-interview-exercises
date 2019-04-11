@@ -2,7 +2,7 @@
 
 A number of exercises to practice 'whiteboard' interview questions in PHP.
 
-Inside `exercises` directory you can find folders containing the exercises and completed versions.
+Inside `exercises` directory, you can find folders containing the exercises and completed versions.
 There are multiple ways to solve each problem, feel free to experiment.
 
 ## Install
