@@ -1,9 +1,11 @@
-# Coding Questions · [![Build Status](https://travis-ci.com/azdanov/questions.svg?branch=master)](https://travis-ci.com/azdanov/questions) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/azdanov/questions/blob/master/LICENSE)
+# PHP Interview Exercises · [![Build Status](https://travis-ci.com/azdanov/questions.svg?branch=master)](https://travis-ci.com/azdanov/questions) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/azdanov/questions/blob/master/LICENSE)
 
-A number of exercises to practice 'whiteboard' interview questions in PHP.
+A number of exercises to practice whiteboard interview questions in PHP.
 
 Inside `exercises` directory, you can find folders containing the exercises and completed versions.
 There are multiple ways to solve each problem, feel free to experiment.
+
+If you are stuck don't be afraid to search online for an algorithm or a solution. Even by copying and later analyzing you will gain lots of experience in problem solving.
 
 ## Install
 
