@@ -12,7 +12,7 @@ namespace Exercises\LinkedList;
  * If next is not provided the default value is null
  * otherwise it's of Node type.
  */
-class Node
+final class Node
 {
     public function __construct()
     {

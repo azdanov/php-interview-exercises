@@ -41,11 +41,7 @@ final class PalindromeComplete
         array_walk($chars, static function (
             $char,
             $key
-        ) use (
-            &$isPalindrome,
-            $string,
-            $length
-        ): void {
+        ) use (&$isPalindrome, $string, $length): void {
             if ($char !== $string[$length - $key - 1]) {
                 $isPalindrome[] = false;
             }

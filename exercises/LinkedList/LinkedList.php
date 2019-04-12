@@ -11,7 +11,7 @@ use Iterator;
  *
  * This class has single property head that references first node.
  */
-class LinkedList implements Iterator
+final class LinkedList implements Iterator
 {
     public function __construct()
     {

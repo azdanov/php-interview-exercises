@@ -28,7 +28,7 @@ final class ReverseStringComplete
         $reversed = '';
         $length = strlen($string);
 
-        for ($i = 0; $i < $length; $i++) {
+        for ($i = 0; $i < $length; ++$i) {
             $reversed = $string[$i] . $reversed;
         }
 

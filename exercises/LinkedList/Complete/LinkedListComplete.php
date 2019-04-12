@@ -6,7 +6,7 @@ namespace Exercises\LinkedList\Complete;
 
 use Iterator;
 
-class LinkedListComplete implements Iterator
+final class LinkedListComplete implements Iterator
 {
     /** @var NodeComplete|null */
     public $head;

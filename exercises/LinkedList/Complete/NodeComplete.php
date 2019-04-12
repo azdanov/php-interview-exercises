@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Exercises\LinkedList\Complete;
 
-class NodeComplete
+final class NodeComplete
 {
-    /** @var mixed */
-    public $data;
     /** @var self */
     public $next;
+    /** @var mixed */
+    public $data;
 
     /** @param mixed $data */
     public function __construct($data, ?self $next = null)

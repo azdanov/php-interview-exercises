@@ -8,7 +8,7 @@ use Exercises\LinkedList\Complete\LinkedListComplete;
 use Exercises\LinkedList\Complete\NodeComplete;
 use PHPUnit\Framework\TestCase;
 
-class LinkedListCompleteTest extends TestCase
+final class LinkedListCompleteTest extends TestCase
 {
     /** @var LinkedListComplete */
     private $list;
@@ -80,10 +80,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(2)
-            )
+            new NodeComplete(1, new NodeComplete(2))
         );
 
         $this->list->removeFirst();
@@ -104,10 +101,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(2)
-            )
+            new NodeComplete(1, new NodeComplete(2))
         );
 
         $this->list->removeLast();
@@ -127,10 +121,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(2)
-            )
+            new NodeComplete(1, new NodeComplete(2))
         );
 
         $first = $this->list->getAt(0);
@@ -171,13 +162,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $first = $this->list->head;
@@ -193,13 +178,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $first = $this->list->head->next;
@@ -215,13 +194,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $first = $this->list->head->next->next->next;
@@ -244,13 +217,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $this->list->insertAt('a', -10);
@@ -263,13 +230,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $this->list->insertAt('a', 0);
@@ -282,13 +243,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $this->list->insertAt('a', 2);
@@ -302,10 +257,7 @@ class LinkedListCompleteTest extends TestCase
 
     public function testInsertAtLast(): void
     {
-        $this->list->head = new NodeComplete(
-            0,
-            new NodeComplete(1)
-        );
+        $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $this->list->insertAt('hi', 2);
 
@@ -316,10 +268,7 @@ class LinkedListCompleteTest extends TestCase
 
     public function testInsertAtOutOfBound(): void
     {
-        $this->list->head = new NodeComplete(
-            0,
-            new NodeComplete(1)
-        );
+        $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $this->list->insertAt('hi', 20);
 
@@ -332,13 +281,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $keys = [];
@@ -358,13 +301,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $keys = [];
@@ -406,10 +343,7 @@ class LinkedListCompleteTest extends TestCase
 
     public function testMidpointTwo(): void
     {
-        $this->list->head = new NodeComplete(
-            0,
-            new NodeComplete(1)
-        );
+        $this->list->head = new NodeComplete(0, new NodeComplete(1));
 
         $midpoint = LinkedListComplete::midpoint($this->list);
 
@@ -420,10 +354,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(2)
-            )
+            new NodeComplete(1, new NodeComplete(2))
         );
 
         $midpoint = LinkedListComplete::midpoint($this->list);
@@ -435,13 +366,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $midpoint = LinkedListComplete::midpoint($this->list);
@@ -508,13 +433,7 @@ class LinkedListCompleteTest extends TestCase
     {
         $this->list->head = new NodeComplete(
             0,
-            new NodeComplete(
-                1,
-                new NodeComplete(
-                    2,
-                    new NodeComplete(3)
-                )
-            )
+            new NodeComplete(1, new NodeComplete(2, new NodeComplete(3)))
         );
 
         $fromLast = LinkedListComplete::fromLast($this->list, 1);

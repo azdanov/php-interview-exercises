@@ -8,7 +8,7 @@ use Exercises\LinkedList\LinkedList;
 use Exercises\LinkedList\Node;
 use PHPUnit\Framework\TestCase;
 
-class LinkedListTest extends TestCase
+final class LinkedListTest extends TestCase
 {
     /** @var LinkedList */
     private $list;
@@ -85,13 +85,7 @@ class LinkedListTest extends TestCase
     public function testRemoveFirst(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(2)
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2)));
 
         $this->list->removeFirst();
 
@@ -111,13 +105,7 @@ class LinkedListTest extends TestCase
     public function testRemoveLast(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(2)
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2)));
 
         $this->list->removeLast();
 
@@ -136,13 +124,7 @@ class LinkedListTest extends TestCase
     public function testGetAt(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(2)
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2)));
 
         $first = $this->list->getAt(0);
         self::assertSame(0, $first->data);
@@ -184,16 +166,7 @@ class LinkedListTest extends TestCase
     public function testRemoveAtFirst(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $first = $this->list->head;
         self::assertSame(0, $first->data);
@@ -207,16 +180,7 @@ class LinkedListTest extends TestCase
     public function testRemoveAtIndex(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $first = $this->list->head->next;
         self::assertSame(1, $first->data);
@@ -230,16 +194,7 @@ class LinkedListTest extends TestCase
     public function testRemoveAtLast(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $first = $this->list->head->next->next->next;
         self::assertSame(3, $first->data);
@@ -261,16 +216,7 @@ class LinkedListTest extends TestCase
     public function testInsertAtNegativeOutOfBound(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $this->list->insertAt('a', -10);
 
@@ -281,16 +227,7 @@ class LinkedListTest extends TestCase
     public function testInsertAt0(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $this->list->insertAt('a', 0);
 
@@ -301,16 +238,7 @@ class LinkedListTest extends TestCase
     public function testInsertAtMiddle(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $this->list->insertAt('a', 2);
 
@@ -324,10 +252,7 @@ class LinkedListTest extends TestCase
     public function testInsertAtLast(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(1)
-        );
+        $this->list->head = new Node(0, new Node(1));
 
         $this->list->insertAt('hi', 2);
 
@@ -339,10 +264,7 @@ class LinkedListTest extends TestCase
     public function testInsertAtOutOfBound(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(1)
-        );
+        $this->list->head = new Node(0, new Node(1));
 
         $this->list->insertAt('hi', 20);
 
@@ -354,16 +276,7 @@ class LinkedListTest extends TestCase
     public function testForEach(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $keys = [];
         $this->list->forEach(static function (&$data, $index) use (&$keys): void {
@@ -381,16 +294,7 @@ class LinkedListTest extends TestCase
     public function testForEachAs(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $keys = [];
         foreach ($this->list as $key => $item) {
@@ -435,10 +339,7 @@ class LinkedListTest extends TestCase
     public function testMidpointTwo(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(1)
-        );
+        $this->list->head = new Node(0, new Node(1));
 
         $midpoint = LinkedList::midpoint($this->list);
 
@@ -448,13 +349,7 @@ class LinkedListTest extends TestCase
     public function testMidpointOdd(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(2)
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2)));
 
         $midpoint = LinkedList::midpoint($this->list);
 
@@ -464,16 +359,7 @@ class LinkedListTest extends TestCase
     public function testMidpointEven(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $midpoint = LinkedList::midpoint($this->list);
 
@@ -543,16 +429,7 @@ class LinkedListTest extends TestCase
     public function testFromLast(): void
     {
         self::markTestSkipped();
-        $this->list->head = new Node(
-            0,
-            new Node(
-                1,
-                new Node(
-                    2,
-                    new Node(3)
-                )
-            )
-        );
+        $this->list->head = new Node(0, new Node(1, new Node(2, new Node(3))));
 
         $fromLast = LinkedList::fromLast($this->list, 1);
 

@@ -7,7 +7,7 @@ namespace Tests\LinkedList;
 use Exercises\LinkedList\Node;
 use PHPUnit\Framework\TestCase;
 
-class NodeTest extends TestCase
+final class NodeTest extends TestCase
 {
     public function testCanCreateNode(): void
     {
