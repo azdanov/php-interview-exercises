@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Exercises\Trees\Complete;
+namespace Exercises\Tree\Complete;
 
 use function array_filter;
 use function array_values;
 
 final class NodeComplete
 {
-    /** @var array<NodeComplete> */
+    /** @var NodeComplete[] */
     public $children = [];
     /** @var mixed */
     public $data;

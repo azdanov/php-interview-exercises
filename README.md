@@ -40,7 +40,8 @@ This will allow you to write code and be sure that the solution is correct.
 * [QueueFromStacks](./exercises/QueueFromStacks/QueueFromStacks.php)
 * [Node](./exercises/LinkedList/Node.php)
 * [LinkedList](./exercises/LinkedList/LinkedList.php)
-* [Trees](./exercises/Trees/Trees.php)
+* [Node](./exercises/Tree/Node.php)
+* [Tree](./exercises/Tree/Tree.php)
 
 ## License
 

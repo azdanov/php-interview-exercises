@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Exercises\Trees;
+namespace Exercises\Tree;
 
 /**
  * Create a node class that is initialized with passed

@@ -2,37 +2,40 @@
 
 declare(strict_types=1);
 
-namespace Tests\Trees\Complete;
+namespace Tests\Tree;
 
-use Exercises\Trees\Complete\NodeComplete;
+use Exercises\Tree\Node;
 use PHPUnit\Framework\TestCase;
 use function array_key_last;
 use function method_exists;
 
-final class NodeCompleteTest extends TestCase
+final class NodeTest extends TestCase
 {
     public function testHasMethods(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
-            method_exists(NodeComplete::class, 'add'),
+            method_exists(Node::class, 'add'),
             'Class does not have method add'
         );
         self::assertTrue(
-            method_exists(NodeComplete::class, 'remove'),
+            method_exists(Node::class, 'remove'),
             'Class does not have method remove'
         );
     }
 
     public function testHasData(): void
     {
-        $node = new NodeComplete(10);
+        self::markTestSkipped();
+        $node = new Node(10);
 
         self::assertSame(10, $node->data);
     }
 
     public function testCanAdd(): void
     {
-        $node = new NodeComplete(10);
+        self::markTestSkipped();
+        $node = new Node(10);
 
         $node->add(20);
 
@@ -42,7 +45,8 @@ final class NodeCompleteTest extends TestCase
 
     public function testCanAddMultiple(): void
     {
-        $node = new NodeComplete(10);
+        self::markTestSkipped();
+        $node = new Node(10);
 
         $node->add(20);
         $node->add(30);
@@ -54,7 +58,8 @@ final class NodeCompleteTest extends TestCase
 
     public function testCanRemove(): void
     {
-        $node = new NodeComplete(10);
+        self::markTestSkipped();
+        $node = new Node(10);
         $node->add(20);
         self::assertSame(20, $node->children[0]->data);
 
@@ -65,7 +70,8 @@ final class NodeCompleteTest extends TestCase
 
     public function testCanRemoveMultiple(): void
     {
-        $node = new NodeComplete(10);
+        self::markTestSkipped();
+        $node = new Node(10);
         $node->add(20);
         $node->add(30);
         $node->add(40);
