@@ -45,6 +45,12 @@ This will allow you to write code and be sure that the solution is correct.
 - [Tree](./exercises/Tree/Tree.php)
 - [BinarySearchTree](./exercises/BinarySearchTree/BinarySearchTree.php)
 
+## Aside
+
+[![Exercise Count](https://img.shields.io/endpoint.svg?url=https://php-interview-questions-counter.netlify.com/.netlify/functions/count)](./exercises)
+
+This Exercise Counter is made with [Shields IO](https://shields.io/endpoint), [Axios](https://github.com/axios/axios), [GitHub GraphQL](https://developer.github.com/v4/) and [Netlify Functions](https://www.netlify.com/docs/functions/).
+
 ## License
 
 [MIT](./LICENSE)
