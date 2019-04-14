@@ -40,6 +40,7 @@ This will allow you to write code and be sure that the solution is correct.
 - [QueueFromStacks](./exercises/QueueFromStacks/QueueFromStacks.php)
 - [LinkedList](./exercises/LinkedList/LinkedList.php)
 - [Tree](./exercises/Tree/Tree.php)
+- [BinarySearchTree](./exercises/BinarySearchTree/BinarySearchTree.php)
 
 ## License
 
