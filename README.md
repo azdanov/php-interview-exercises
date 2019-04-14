@@ -5,7 +5,9 @@ A number of exercises to practice whiteboard interview questions in PHP.
 Inside `exercises` directory, you can find folders containing the exercises and completed versions.
 There are multiple ways to solve each problem, feel free to experiment.
 
-If you are stuck don't be afraid to search online for an algorithm or a solution. Even by copying and later analyzing you will gain lots of experience in problem solving.
+If you are stuck don't be afraid to search online for a pseudo-code algorithm or a solution. Even by copying and later analyzing the solution you will gain lots of experience in problem solving.
+
+Also check out the tests and see what results are expected. Playing around with [Xdebug](https://xdebug.org/) is a plus.
 
 ## Install
 
