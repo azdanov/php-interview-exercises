@@ -37,6 +37,7 @@ This will allow you to write code and be sure that the solution is correct.
 - [Pyramid](./exercises/Pyramid/Pyramid.php)
 - [Spiral](./exercises/Spiral/Spiral.php)
 - [Fibonacci](./exercises/Fibonacci/Fibonacci.php)
+- [Events](./exercises/Events/Events.php)
 - [Queue](./exercises/Queue/Queue.php)
 - [Stack](./exercises/Stack/Stack.php)
 - [QueueFromStacks](./exercises/QueueFromStacks/QueueFromStacks.php)

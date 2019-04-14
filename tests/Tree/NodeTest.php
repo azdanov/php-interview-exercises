@@ -11,6 +11,13 @@ use function method_exists;
 
 final class NodeTest extends TestCase
 {
+    public function testHasProperties(): void
+    {
+        self::markTestSkipped();
+        self::assertClassHasAttribute('children', Node::class);
+        self::assertClassHasAttribute('data', Node::class);
+    }
+
     public function testHasMethods(): void
     {
         self::markTestSkipped();

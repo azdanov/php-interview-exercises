@@ -8,8 +8,16 @@ use Exercises\BinarySearchTree\BinarySearchTree;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-class BinarySearchTreeTest extends TestCase
+final class BinarySearchTreeTest extends TestCase
 {
+    public function testHasProperties(): void
+    {
+        self::markTestSkipped();
+        self::assertClassHasAttribute('data', BinarySearchTree::class);
+        self::assertClassHasAttribute('left', BinarySearchTree::class);
+        self::assertClassHasAttribute('right', BinarySearchTree::class);
+    }
+
     public function testHasMethods(): void
     {
         self::markTestSkipped();

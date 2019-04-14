@@ -11,6 +11,12 @@ use function method_exists;
 
 final class NodeCompleteTest extends TestCase
 {
+    public function testHasProperties(): void
+    {
+        self::assertClassHasAttribute('children', NodeComplete::class);
+        self::assertClassHasAttribute('data', NodeComplete::class);
+    }
+
     public function testHasMethods(): void
     {
         self::assertTrue(

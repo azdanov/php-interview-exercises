@@ -10,6 +10,13 @@ use function method_exists;
 
 final class BinarySearchTreeTestComplete extends TestCase
 {
+    public function testHasProperties(): void
+    {
+        self::assertClassHasAttribute('data', BinarySearchTreeComplete::class);
+        self::assertClassHasAttribute('left', BinarySearchTreeComplete::class);
+        self::assertClassHasAttribute('right', BinarySearchTreeComplete::class);
+    }
+
     public function testHasMethods(): void
     {
         self::assertTrue(
