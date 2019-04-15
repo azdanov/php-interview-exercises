@@ -5,16 +5,11 @@ declare(strict_types=1);
 namespace Exercises\LinkedList;
 
 /**
- * Represents single item in a linked list.
- * This class should have data and next properties
- * that are instantiated in a constructor.
+ * Represents single item in a LinkedList.
  *
- * If next is not provided the default value is null
- * otherwise it's of Node type.
+ * @property mixed $data
+ * @property self|null $next default is null when Node is not provided
  */
 final class Node
 {
-    public function __construct()
-    {
-    }
 }

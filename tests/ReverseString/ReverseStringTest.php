@@ -12,6 +12,7 @@ final class ReverseStringTest extends TestCase
 {
     public function testHasReverse(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(ReverseString::class, 'reverse'),
             'Class does not have static method reverse'

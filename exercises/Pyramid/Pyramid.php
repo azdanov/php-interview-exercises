@@ -5,16 +5,13 @@ declare(strict_types=1);
 namespace Exercises\Pyramid;
 
 /**
- * Given number of rows print a pyramid.
+ * Print a pyramid.
  *
+ * @method static void print(int $rows)
  * @example Pyramid::print(3)  -> '  #  '
  *                                ' ### '
  *                                '#####'
  */
 final class Pyramid
 {
-    public static function print(int $rows): void
-    {
-        echo $rows;
-    }
 }

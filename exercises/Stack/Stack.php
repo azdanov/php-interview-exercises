@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace Exercises\Stack;
 
 /**
- * Create a stack data structure.
- * This should be a class with push, pop and peek methods.
+ * Create a Stack.
  *
  * When stack is empty pop and peek methods should return null.
  *
+ * @method void push(mixed $value)
+ * @method mixed|null pop()
+ * @method mixed|null peek()
  * @example $queue = new Stack();
  * $queue->push(1);
  * $queue->push(2);

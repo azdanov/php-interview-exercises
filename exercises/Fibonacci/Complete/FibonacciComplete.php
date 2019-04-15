@@ -11,11 +11,11 @@ final class FibonacciComplete
     /** @var array<int> */
     private static $cache = [];
 
-    public static function get1(int $limit): int
+    public static function get1(int $index): int
     {
         $result = [];
 
-        for ($i = 0; $i <= $limit; ++$i) {
+        for ($i = 0; $i <= $index; ++$i) {
             if ($i < 2) {
                 $result[] = $i;
             } else {
@@ -23,32 +23,32 @@ final class FibonacciComplete
             }
         }
 
-        return $result[$limit];
+        return $result[$index];
     }
 
-    public static function get2(int $limit): int
+    public static function get2(int $index): int
     {
-        if ($limit < 2) {
-            return $limit;
+        if ($index < 2) {
+            return $index;
         }
 
-        return self::get2($limit - 1) + self::get2($limit - 2);
+        return self::get2($index - 1) + self::get2($index - 2);
     }
 
-    public static function get3(int $limit): int
+    public static function get3(int $index): int
     {
-        if (array_key_exists($limit, self::$cache)) {
-            return self::$cache[$limit];
+        if (array_key_exists($index, self::$cache)) {
+            return self::$cache[$index];
         }
 
-        if ($limit < 2) {
-            self::$cache[$limit] = $limit;
+        if ($index < 2) {
+            self::$cache[$index] = $index;
 
-            return $limit;
+            return $index;
         }
 
-        $result = self::get3($limit - 1) + self::get3($limit - 2);
-        self::$cache[$limit] = $result;
+        $result = self::get3($index - 1) + self::get3($index - 2);
+        self::$cache[$index] = $result;
 
         return $result;
     }

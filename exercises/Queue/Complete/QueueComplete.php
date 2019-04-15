@@ -11,7 +11,7 @@ use function count;
 
 final class QueueComplete
 {
-    /** @var array<any> */
+    /** @var mixed[] */
     private $queue = [];
 
     /** @param mixed $value */

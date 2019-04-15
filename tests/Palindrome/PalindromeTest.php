@@ -12,6 +12,7 @@ final class PalindromeTest extends TestCase
 {
     public function testHasCheck(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(Palindrome::class, 'check'),
             'Class does not have static method check'

@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace Exercises\Queue;
 
 /**
- * Create a queue data structure.
- * This should be a class with add, remove and peek methods.
- *
- * Also create a static zip method that interweaves 2 queues
- * producing a new one.
+ * Create a Queue.
  *
  * When queue is empty remove and peek methods should return null.
  *
+ * @property mixed[] $queue
+ * @method void add(mixed $value)
+ * @method mixed|null remove()
+ * @method mixed|null peek()
+ * @method static self zip(self $queue1, self $queue2) interweaves two provided queues
  * @example $queue1 = new Queue();
  * $queue1->add(1);
  * $queue1->add(2);

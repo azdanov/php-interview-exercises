@@ -12,6 +12,7 @@ final class VowelsTest extends TestCase
 {
     public function testHasCount(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(Vowels::class, 'count'),
             'Class does not have static method count'

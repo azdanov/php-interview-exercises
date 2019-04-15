@@ -12,6 +12,7 @@ final class LadderTest extends TestCase
 {
     public function testHasPrint(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(Ladder::class, 'print'),
             'Class does not have static method print'

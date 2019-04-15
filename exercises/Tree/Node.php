@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace Exercises\Tree;
 
 /**
- * Create a node class that is initialized with passed
- * data property and empty children array.
+ * Represents single item in a Tree.
  *
- * This class should have methods add and remove.
+ * @property self[] $children
+ * @property mixed $data initialized in the constructor
+ * @method void add(mixed $data)
+ * @method void remove(mixed $data)
  */
 final class Node
 {

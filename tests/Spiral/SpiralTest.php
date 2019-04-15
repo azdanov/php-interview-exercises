@@ -12,6 +12,7 @@ final class SpiralTest extends TestCase
 {
     public function testHasMake(): void
     {
+        self::markTestSkipped();
         self::assertTrue(
             method_exists(Spiral::class, 'make'),
             'Class does not have static method make'

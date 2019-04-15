@@ -5,17 +5,13 @@ declare(strict_types=1);
 namespace Exercises\Palindrome;
 
 /**
- * Given a string, verify that it is a palindrome.
- * Palindrome is a string that equal itself when reversed.
- * Non-alpha chars must be also included.
+ * Palindrome is a string that equals itself when reversed.
+ * Non-alpha chars must also be included.
  *
+ * @method static bool check(string $string)
  * @example Palindrome::check('asddsa')  === true
  * @example Palindrome::check('asdd')  === false
  */
 final class Palindrome
 {
-    public static function check(string $string): bool
-    {
-        return (bool) $string;
-    }
 }

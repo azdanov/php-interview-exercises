@@ -5,15 +5,13 @@ declare(strict_types=1);
 namespace Exercises\Tree;
 
 /**
- * Create a tree class with property root set to null.
+ * Create a Tree.
  *
- * This class should have traverseBreadthFirst and traverseDepthFirst
- * methods. Each method accepts a callback that must be called on each
- * tree node.
+ * Methods traverseBreadthFirst and traverseDepthFirst should call
+ * provided callback on each tree Node.
  *
- * This class should have static method levelWidth that given the root
- * node of a tree, returns an array where each element is the width
- * of the tree at respective level.
+ * Method levelWidth when given the root node of a tree should return
+ * an array where each element is the width of the tree at respective level.
  *      0
  *    / | \
  *  1   2  3
@@ -21,6 +19,11 @@ namespace Exercises\Tree;
  *  4      5
  * ===
  *  [1, 3, 2]
+ *
+ * @property Node|null $root
+ * @method void traverseBreadthFirst(callable $callback)
+ * @method void traverseDepthFirst(callable $callback)
+ * @method static int[] levelWidth(Node $root)
  */
 final class Tree
 {
