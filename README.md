@@ -41,6 +41,7 @@ This will allow you to write code and be sure that the solution is correct.
 - [Queue](./exercises/Queue/Queue.php)
 - [Stack](./exercises/Stack/Stack.php)
 - [QueueFromStacks](./exercises/QueueFromStacks/QueueFromStacks.php)
+- [Sort](./exercises/Sort/Sort.php)
 - [LinkedList](./exercises/LinkedList/LinkedList.php)
 - [Tree](./exercises/Tree/Tree.php)
 - [BinarySearchTree](./exercises/BinarySearchTree/BinarySearchTree.php)
