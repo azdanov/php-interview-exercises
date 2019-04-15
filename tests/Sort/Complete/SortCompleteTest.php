@@ -6,10 +6,14 @@ namespace Tests\Sort\Complete;
 
 use Exercises\Sort\Complete\SortComplete;
 use PHPUnit\Framework\TestCase;
+use ReflectionException;
+use Tests\GetReflectionMethod;
 use function method_exists;
 
 final class SortCompleteTest extends TestCase
 {
+    use GetReflectionMethod;
+
     /** @var int[] */
     private $input = [220, -32, 405, -114, 0, 23, 5, -1];
     /** @var int[] */
@@ -32,6 +36,10 @@ final class SortCompleteTest extends TestCase
         self::assertTrue(
             method_exists(SortComplete::class, 'merge'),
             'Class does not have method merge'
+        );
+        self::assertTrue(
+            method_exists(SortComplete::class, 'merger'),
+            'Class does not have method merger'
         );
         self::assertTrue(
             method_exists(SortComplete::class, 'quick'),
@@ -58,9 +66,19 @@ final class SortCompleteTest extends TestCase
         self::assertSame($this->sorted, SortComplete::insertion($this->input));
     }
 
+    /** @throws ReflectionException */
+    public function testMergerHelper(): void
+    {
+        $left = [1, 9];
+        $right = [3, 7, 10];
+
+        $merger = self::getMethod(SortComplete::class, 'merger');
+
+        self::assertSame([1, 3, 7, 9, 10], $merger->invoke(null, $left, $right));
+    }
+
     public function testMergeSort(): void
     {
-        self::markTestSkipped();
         self::assertSame($this->sorted, SortComplete::merge($this->input));
     }
 

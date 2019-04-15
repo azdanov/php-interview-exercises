@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Exercises\Sort\Complete;
 
+use function array_merge;
+use function array_shift;
+use function array_slice;
 use function count;
+use function intdiv;
 
 final class SortComplete
 {
@@ -82,7 +86,19 @@ final class SortComplete
      */
     public static function merge(array $input): array
     {
-        return $input;
+        $length = count($input);
+        if ($length <= 1) {
+            return $input;
+        }
+
+        $middle = intdiv($length, 2);
+        $left = array_slice($input, 0, $middle);
+        $right = array_slice($input, $middle);
+
+        $left = self::merge($left);
+        $right = self::merge($right);
+
+        return self::merger($left, $right);
     }
 
     /**
@@ -103,5 +119,28 @@ final class SortComplete
     public static function radix(array $input): array
     {
         return $input;
+    }
+
+    /**
+     * Helper method for Merge sort.
+     *
+     * @param array<mixed> $left
+     * @param array<mixed> $right
+     *
+     * @return array<mixed>
+     */
+    private static function merger(array $left, array $right): array
+    {
+        $results = [];
+
+        while (count($left) && count($right)) {
+            if ($left[0] < $right[0]) {
+                $results[] = array_shift($left);
+            } else {
+                $results[] = array_shift($right);
+            }
+        }
+
+        return array_merge($results, $left, $right);
     }
 }
