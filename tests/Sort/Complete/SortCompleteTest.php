@@ -10,12 +10,13 @@ use function method_exists;
 
 final class SortCompleteTest extends TestCase
 {
+    /** @var int[] */
     private $input = [220, -32, 405, -114, 0, 23, 5, -1];
+    /** @var int[] */
     private $sorted = [-114, -32, -1, 0, 5, 23, 220, 405];
 
     public function testHasMethods(): void
     {
-        self::markTestSkipped();
         self::assertTrue(
             method_exists(SortComplete::class, 'bubble'),
             'Class does not have method bubble'
@@ -44,7 +45,6 @@ final class SortCompleteTest extends TestCase
 
     public function testBubbleSort(): void
     {
-        self::markTestSkipped();
         self::assertEquals($this->sorted, SortComplete::bubble($this->input));
     }
 

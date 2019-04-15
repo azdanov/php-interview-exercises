@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Exercises\Sort\Complete;
 
+use function count;
+
 final class SortComplete
 {
     /**
@@ -13,6 +15,22 @@ final class SortComplete
      */
     public static function bubble(array $input): array
     {
+        $loop = true;
+        $length = count($input) - 1;
+
+        while ($loop) {
+            $loop = false;
+
+            for ($i = 0; $i < $length; ++$i) {
+                if ($input[$i] > $input[$i + 1]) {
+                    $temp = $input[$i + 1];
+                    $input[$i + 1] = $input[$i];
+                    $input[$i] = $temp;
+                    $loop = true;
+                }
+            }
+        }
+
         return $input;
     }
 
