@@ -41,6 +41,20 @@ final class SortComplete
      */
     public static function selection(array $input): array
     {
+        for ($i = 0, $min = $i, $length = count($input); $i < $length; $min = ++$i) {
+            for ($j = $i + 1; $j < $length; ++$j) {
+                if ($input[$j] < $input[$min]) {
+                    $min = $j;
+                }
+            }
+
+            if ($i !== $min) {
+                $temp = $input[$i];
+                $input[$i] = $input[$min];
+                $input[$min] = $temp;
+            }
+        }
+
         return $input;
     }
 

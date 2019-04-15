@@ -50,7 +50,6 @@ final class SortCompleteTest extends TestCase
 
     public function testSelectionSort(): void
     {
-        self::markTestSkipped();
         self::assertEquals($this->sorted, SortComplete::selection($this->input));
     }
 
