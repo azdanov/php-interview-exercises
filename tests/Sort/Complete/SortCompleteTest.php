@@ -45,35 +45,34 @@ final class SortCompleteTest extends TestCase
 
     public function testBubbleSort(): void
     {
-        self::assertEquals($this->sorted, SortComplete::bubble($this->input));
+        self::assertSame($this->sorted, SortComplete::bubble($this->input));
     }
 
     public function testSelectionSort(): void
     {
-        self::assertEquals($this->sorted, SortComplete::selection($this->input));
+        self::assertSame($this->sorted, SortComplete::selection($this->input));
     }
 
     public function testInsertionSort(): void
     {
-        self::markTestSkipped();
-        self::assertEquals($this->sorted, SortComplete::insertion($this->input));
+        self::assertSame($this->sorted, SortComplete::insertion($this->input));
     }
 
     public function testMergeSort(): void
     {
         self::markTestSkipped();
-        self::assertEquals($this->sorted, SortComplete::merge($this->input));
+        self::assertSame($this->sorted, SortComplete::merge($this->input));
     }
 
     public function testQuickSort(): void
     {
         self::markTestSkipped();
-        self::assertEquals($this->sorted, SortComplete::quick($this->input));
+        self::assertSame($this->sorted, SortComplete::quick($this->input));
     }
 
     public function testRadixSort(): void
     {
         self::markTestSkipped();
-        self::assertEquals($this->sorted, SortComplete::radix($this->input));
+        self::assertSame($this->sorted, SortComplete::radix($this->input));
     }
 }

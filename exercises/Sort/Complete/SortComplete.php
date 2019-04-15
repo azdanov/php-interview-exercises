@@ -65,6 +65,13 @@ final class SortComplete
      */
     public static function insertion(array $input): array
     {
+        foreach ($input as $i => $value) {
+            for ($j = $i; $j > 0 && $input[$j - 1] > $value; --$j) {
+                $input[$j] = $input[$j - 1];
+            }
+            $input[$j] = $value;
+        }
+
         return $input;
     }
 
