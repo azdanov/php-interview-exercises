@@ -25,8 +25,8 @@ This will allow you to write code and be sure that the solution is correct.
 ## Suggested Path
 
 - [FizzBuzz](./exercises/FizzBuzz/FizzBuzz.php)
-- [ReverseString](./exercises/ReverseString/ReverseString.php)
-- [ReverseInt](./exercises/ReverseInt/ReverseInt.php)
+- [Numbers](./exercises/Numbers/Numbers.php)
+- [Reverse](./exercises/Reverse/Reverse.php)
 - [Palindrome](./exercises/Palindrome/Palindrome.php)
 - [MaxChar](./exercises/MaxChar/MaxChar.php)
 - [ArrayGroup](./exercises/ArrayGroup/ArrayGroup.php)
