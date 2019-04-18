@@ -8,7 +8,7 @@ use Exercises\BinarySearchTree\Complete\BinarySearchTreeComplete;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-final class BinarySearchTreeTestComplete extends TestCase
+final class BinarySearchTreeCompleteTest extends TestCase
 {
     public function testHasProperties(): void
     {

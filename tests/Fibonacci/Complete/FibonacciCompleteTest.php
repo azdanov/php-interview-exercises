@@ -7,7 +7,7 @@ namespace Tests\MaxChar;
 use Exercises\Fibonacci\Complete\FibonacciComplete;
 use PHPUnit\Framework\TestCase;
 
-final class FibonacciTestComplete extends TestCase
+final class FibonacciCompleteTest extends TestCase
 {
     public function testGet0th(): void
     {

@@ -7,7 +7,7 @@ namespace Tests\MaxChar;
 use Exercises\Capitalize\Complete\CapitalizeComplete;
 use PHPUnit\Framework\TestCase;
 
-final class CapitalizeTestComplete extends TestCase
+final class CapitalizeCompleteTest extends TestCase
 {
     public function testCapitalizeFirst1(): void
     {

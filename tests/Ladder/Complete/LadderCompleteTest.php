@@ -7,7 +7,7 @@ namespace Tests\MaxChar;
 use Exercises\Ladder\Complete\LadderComplete;
 use PHPUnit\Framework\TestCase;
 
-final class LadderTestComplete extends TestCase
+final class LadderCompleteTest extends TestCase
 {
     public function testPrintLadder(): void
     {

@@ -8,7 +8,7 @@ use Exercises\MaxChar\Complete\MaxCharComplete;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-final class MaxCharTestComplete extends TestCase
+final class MaxCharCompleteTest extends TestCase
 {
     public function testHasGet(): void
     {

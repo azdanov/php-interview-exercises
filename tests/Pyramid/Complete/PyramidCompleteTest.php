@@ -7,7 +7,7 @@ namespace Tests\MaxChar;
 use Exercises\Pyramid\Complete\PyramidComplete;
 use PHPUnit\Framework\TestCase;
 
-final class PyramidTestComplete extends TestCase
+final class PyramidCompleteTest extends TestCase
 {
     public function testPrintLadder(): void
     {

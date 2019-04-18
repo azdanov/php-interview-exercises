@@ -8,7 +8,7 @@ use Exercises\Stack\Complete\StackComplete;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-final class StackTestComplete extends TestCase
+final class StackCompleteTest extends TestCase
 {
     /** @var StackComplete */
     private $stack;

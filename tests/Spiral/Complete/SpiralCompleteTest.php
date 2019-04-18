@@ -7,7 +7,7 @@ namespace Tests\ReverseString;
 use Exercises\Spiral\Complete\SpiralComplete;
 use PHPUnit\Framework\TestCase;
 
-final class SpiralTestComplete extends TestCase
+final class SpiralCompleteTest extends TestCase
 {
     public function testCanPrint1x1(): void
     {

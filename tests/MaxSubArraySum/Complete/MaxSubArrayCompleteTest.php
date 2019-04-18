@@ -8,7 +8,7 @@ use Exercises\MaxSubArraySum\Complete\MaxSubArraySumComplete;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-final class MaxSubArrayTestComplete extends TestCase
+final class MaxSubArrayCompleteTest extends TestCase
 {
     public function testHasMethods(): void
     {

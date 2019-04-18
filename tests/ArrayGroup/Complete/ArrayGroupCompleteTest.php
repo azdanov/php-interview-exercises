@@ -7,7 +7,7 @@ namespace Tests\MaxChar;
 use Exercises\ArrayGroup\Complete\ArrayGroupComplete;
 use PHPUnit\Framework\TestCase;
 
-final class ArrayGroupTestComplete extends TestCase
+final class ArrayGroupCompleteTest extends TestCase
 {
     public function testCanGroupFive(): void
     {

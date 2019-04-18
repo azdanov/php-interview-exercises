@@ -7,7 +7,7 @@ namespace Tests\MaxChar;
 use Exercises\Anagram\Complete\AnagramComplete;
 use PHPUnit\Framework\TestCase;
 
-final class AnagramTestComplete extends TestCase
+final class AnagramCompleteTest extends TestCase
 {
     public function testCanCheckString1(): void
     {

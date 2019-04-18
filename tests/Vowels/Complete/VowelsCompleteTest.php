@@ -7,7 +7,7 @@ namespace Tests\ReverseString;
 use Exercises\Vowels\Complete\VowelsComplete;
 use PHPUnit\Framework\TestCase;
 
-final class VowelsTestComplete extends TestCase
+final class VowelsCompleteTest extends TestCase
 {
     public function testCanCount1(): void
     {

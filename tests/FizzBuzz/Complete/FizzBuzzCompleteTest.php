@@ -7,7 +7,7 @@ namespace Tests\MaxChar\Complete;
 use Exercises\FizzBuzz\Complete\FizzBuzzComplete;
 use PHPUnit\Framework\TestCase;
 
-final class FizzBuzzTestComplete extends TestCase
+final class FizzBuzzCompleteTest extends TestCase
 {
     public function testPrintFizzBuzz(): void
     {

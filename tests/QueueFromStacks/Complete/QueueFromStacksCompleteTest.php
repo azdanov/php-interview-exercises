@@ -4,37 +4,33 @@ declare(strict_types=1);
 
 namespace Tests\Queue;
 
-use Exercises\Queue\Complete\QueueComplete;
+use Exercises\QueueFromStacks\Complete\QueueFromStacksComplete;
 use PHPUnit\Framework\TestCase;
 use function method_exists;
 
-final class QueueTestComplete extends TestCase
+final class QueueFromStacksCompleteTest extends TestCase
 {
-    /** @var QueueComplete */
+    /** @var QueueFromStacksComplete */
     private $queue;
 
     protected function setUp(): void
     {
-        $this->queue = new QueueComplete();
+        $this->queue = new QueueFromStacksComplete();
     }
 
     public function testHasMethods(): void
     {
         self::assertTrue(
-            method_exists(QueueComplete::class, 'add'),
+            method_exists(QueueFromStacksComplete::class, 'add'),
             'Class does not have method add'
         );
         self::assertTrue(
-            method_exists(QueueComplete::class, 'remove'),
+            method_exists(QueueFromStacksComplete::class, 'remove'),
             'Class does not have method remove'
         );
         self::assertTrue(
-            method_exists(QueueComplete::class, 'peek'),
+            method_exists(QueueFromStacksComplete::class, 'peek'),
             'Class does not have method peek'
-        );
-        self::assertTrue(
-            method_exists(QueueComplete::class, 'zip'),
-            'Class does not have static method zip'
         );
     }
 
@@ -67,6 +63,7 @@ final class QueueTestComplete extends TestCase
     public function testCanPeek(): void
     {
         self::assertNull($this->queue->peek());
+
         $this->queue->add(1);
         $this->queue->add(2);
         $this->queue->add(3);
@@ -75,28 +72,5 @@ final class QueueTestComplete extends TestCase
         $this->queue->add(1);
 
         self::assertSame(2, $this->queue->peek());
-    }
-
-    public function testCanZip(): void
-    {
-        $queue1 = new QueueComplete();
-        $queue2 = new QueueComplete();
-
-        $queue1->add(1);
-        $queue1->add(2);
-        $queue1->add(3);
-        $queue1->add(4);
-        $queue2->add('a');
-        $queue2->add('b');
-
-        $queue3 = QueueComplete::zip($queue1, $queue2);
-
-        self::assertSame(1, $queue3->remove());
-        self::assertSame('a', $queue3->remove());
-        self::assertSame(2, $queue3->remove());
-        self::assertSame('b', $queue3->remove());
-        self::assertSame(3, $queue3->remove());
-        self::assertSame(4, $queue3->remove());
-        self::assertNull($queue3->remove());
     }
 }

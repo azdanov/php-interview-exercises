@@ -7,7 +7,7 @@ namespace Tests\Palindrome\Complete;
 use Exercises\Palindrome\Complete\PalindromeComplete;
 use PHPUnit\Framework\TestCase;
 
-final class PalindromeTestComplete extends TestCase
+final class PalindromeCompleteTest extends TestCase
 {
     public function testFafIsPalindrome(): void
     {
