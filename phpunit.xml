@@ -12,16 +12,8 @@
     printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
 >
   <testsuites>
-
-<!--  Comment out before starting  -->
-    <testsuite name="Complete">
-      <directory suffix="TestComplete.php">./tests</directory>
-    </testsuite>
-
-<!--  Uncomment before starting  -->
     <testsuite name="Tests">
       <directory suffix="Test.php">./tests</directory>
     </testsuite>
-
   </testsuites>
 </phpunit>
