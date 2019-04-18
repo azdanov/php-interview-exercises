@@ -30,9 +30,8 @@ final class SearchCompleteTest extends TestCase
         );
         self::assertNull(
             SearchComplete::linear([34, 51, 1, 2, 3, 45, 56, 687], 100)
-        );self::assertNull(
-            SearchComplete::linear([], 100)
         );
+        self::assertNull(SearchComplete::linear([], 100));
     }
 
     public function testBinary(): void
@@ -43,8 +42,13 @@ final class SearchCompleteTest extends TestCase
         );
         self::assertNull(
             SearchComplete::binary([34, 51, 1, 2, 3, 45, 56, 687], 100)
-        );self::assertNull(
-            SearchComplete::binary([], 100)
         );
+        self::assertNull(SearchComplete::binary([], 100));
+    }
+
+    public function testNaive(): void
+    {
+        self::assertSame(3, SearchComplete::naive('ox mox pox', 'ox'));
+        self::assertSame(0, SearchComplete::naive('ox mox pox', 'box'));
     }
 }

@@ -6,6 +6,7 @@ namespace Exercises\Search\Complete;
 
 use function count;
 use function intdiv;
+use function strlen;
 
 final class SearchComplete
 {
@@ -46,5 +47,23 @@ final class SearchComplete
         }
 
         return $input[$middle] === $n ? $middle : null;
+    }
+
+    public static function naive(string $input, string $n): int
+    {
+        $counter = 0;
+
+        for ($i = 0, $iMax = strlen($input), $nMax = strlen($n); $i < $iMax; ++$i) {
+            for ($j = 0; $j < $nMax; ++$j) {
+                if ($n[$j] !== $input[$i + $j]) {
+                    break;
+                }
+                if ($j === $nMax - 1) {
+                    ++$counter;
+                }
+            }
+        }
+
+        return $counter;
     }
 }
