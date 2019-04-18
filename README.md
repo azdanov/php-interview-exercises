@@ -33,6 +33,7 @@ This will allow you to write code and be sure that the solution is correct.
 - [Capitalize](./exercises/Capitalize/Capitalize.php)
 - [Vowels](./exercises/Vowels/Vowels.php)
 - [Anagram](./exercises/Anagram/Anagram.php)
+- [MaxSubArraySum](./exercises/MaxSubArraySum/MaxSubArraySum.php)
 - [Ladder](./exercises/Ladder/Ladder.php)
 - [Pyramid](./exercises/Pyramid/Pyramid.php)
 - [Spiral](./exercises/Spiral/Spiral.php)
