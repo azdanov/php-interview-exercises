@@ -13,9 +13,9 @@ use function intdiv;
 final class SortComplete
 {
     /**
-     * @param array<mixed> $input
+     * @param mixed[] $input
      *
-     * @return array<mixed>
+     * @return mixed[]
      */
     public static function bubble(array $input): array
     {
@@ -37,9 +37,9 @@ final class SortComplete
     }
 
     /**
-     * @param array<mixed> $input
+     * @param mixed[] $input
      *
-     * @return array<mixed>
+     * @return mixed[]
      */
     public static function selection(array $input): array
     {
@@ -59,9 +59,9 @@ final class SortComplete
     }
 
     /**
-     * @param array<mixed> $input
+     * @param mixed[] $input
      *
-     * @return array<mixed>
+     * @return mixed[]
      */
     public static function insertion(array $input): array
     {
@@ -76,9 +76,9 @@ final class SortComplete
     }
 
     /**
-     * @param array<mixed> $input
+     * @param mixed[] $input
      *
-     * @return array<mixed>
+     * @return mixed[]
      */
     public static function merge(array $input): array
     {
@@ -98,19 +98,33 @@ final class SortComplete
     }
 
     /**
-     * @param array<mixed> $input
+     * @param mixed[] $input
      *
-     * @return array<mixed>
+     * @return mixed[]
      */
-    public static function quick(array $input): array
-    {
+    public static function quick(
+        array &$input,
+        ?int $left = 0,
+        ?int $right = null
+    ): array {
+        $right = $right ?? count($input) - 1;
+
+        if ($right - $left < 1) {
+            return [];
+        }
+
+        $pivotIndex = self::pivot($input, $left, $right);
+
+        self::quick($input, $left, $pivotIndex - 1);
+        self::quick($input, $pivotIndex + 1, $right);
+
         return $input;
     }
 
     /**
-     * @param array<mixed> $input
+     * @param mixed[] $input
      *
-     * @return array<mixed>
+     * @return mixed[]
      */
     public static function radix(array $input): array
     {
@@ -118,12 +132,23 @@ final class SortComplete
     }
 
     /**
+     * @param mixed $x
+     * @param mixed $y
+     */
+    private static function swap(&$x, &$y): void
+    {
+        $tmp = $x;
+        $x = $y;
+        $y = $tmp;
+    }
+
+    /**
      * Helper method for Merge sort.
      *
-     * @param array<mixed> $left
-     * @param array<mixed> $right
+     * @param mixed[] $left
+     * @param mixed[] $right
      *
-     * @return array<mixed>
+     * @return mixed[]
      */
     private static function merger(array $left, array $right): array
     {
@@ -140,14 +165,24 @@ final class SortComplete
         return array_merge($results, $left, $right);
     }
 
-    /**
-     * @param mixed $x
-     * @param mixed $y
-     */
-    private static function swap(&$x, &$y): void
-    {
-        $tmp = $x;
-        $x = $y;
-        $y = $tmp;
+    /** @param mixed[] $input */
+    private static function pivot(
+        array &$input,
+        ?int $start = 0,
+        ?int $end = null
+    ): int {
+        $end = $end ?? count($input) - 1;
+        $pivot = $input[$start];
+        $swapIndex = $start;
+
+        for ($i = $start + 1; $i <= $end; ++$i) {
+            if ($input[$i] < $pivot) {
+                self::swap($input[++$swapIndex], $input[$i]);
+            }
+        }
+
+        self::swap($input[$start], $input[$swapIndex]);
+
+        return $swapIndex;
     }
 }

@@ -84,7 +84,6 @@ final class SortCompleteTest extends TestCase
 
     public function testQuickSort(): void
     {
-        self::markTestSkipped();
         self::assertSame($this->sorted, SortComplete::quick($this->input));
     }
 
