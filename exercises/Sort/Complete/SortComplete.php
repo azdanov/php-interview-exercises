@@ -19,18 +19,16 @@ final class SortComplete
      */
     public static function bubble(array $input): array
     {
-        $loop = true;
+        $noSwap = true;
         $length = count($input) - 1;
 
-        while ($loop) {
-            $loop = false;
+        while ($noSwap) {
+            $noSwap = false;
 
             for ($i = 0; $i < $length; ++$i) {
                 if ($input[$i] > $input[$i + 1]) {
-                    $temp = $input[$i + 1];
-                    $input[$i + 1] = $input[$i];
-                    $input[$i] = $temp;
-                    $loop = true;
+                    self::swap($input[$i], $input[$i + 1]);
+                    $noSwap = true;
                 }
             }
         }
@@ -53,9 +51,7 @@ final class SortComplete
             }
 
             if ($i !== $min) {
-                $temp = $input[$i];
-                $input[$i] = $input[$min];
-                $input[$min] = $temp;
+                self::swap($input[$i], $input[$min]);
             }
         }
 
@@ -142,5 +138,16 @@ final class SortComplete
         }
 
         return array_merge($results, $left, $right);
+    }
+
+    /**
+     * @param mixed $x
+     * @param mixed $y
+     */
+    private static function swap(&$x, &$y): void
+    {
+        $tmp = $x;
+        $x = $y;
+        $y = $tmp;
     }
 }
