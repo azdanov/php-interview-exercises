@@ -102,7 +102,7 @@ final class SortComplete
      *
      * @return mixed[]
      */
-    public static function quick(
+    public static function quick1(
         array &$input,
         ?int $left = 0,
         ?int $right = null
@@ -115,10 +115,43 @@ final class SortComplete
 
         $pivotIndex = self::pivot($input, $left, $right);
 
-        self::quick($input, $left, $pivotIndex - 1);
-        self::quick($input, $pivotIndex + 1, $right);
+        self::quick1($input, $left, $pivotIndex - 1);
+        self::quick1($input, $pivotIndex + 1, $right);
 
         return $input;
+    }
+
+    /**
+     * @param mixed[] $input
+     *
+     * @return mixed[]
+     */
+    public static function quick2(
+        array &$input,
+        ?int $left = 0,
+        ?int $right = null
+    ): void {
+        $pivot = $left;
+        $right = $right ?? count($input) - 1;
+
+        if ($right - $left < 1) {
+            return;
+        }
+
+        // Avoid bad performance when sorting an already sorted array
+        self::swap($input[intdiv($left + $right, 2)], $input[$right]);
+
+        for ($i = $left; $i < $right; ++$i) {
+            if ($input[$i] < $input[$right]) {
+                self::swap($input[$i], $input[$pivot]);
+                ++$pivot;
+            }
+        }
+
+        self::swap($input[$pivot], $input[$right]);
+
+        self::quick2($input, $left, $pivot - 1);
+        self::quick2($input, $pivot + 1, $right);
     }
 
     /**

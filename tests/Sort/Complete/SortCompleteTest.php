@@ -42,8 +42,12 @@ final class SortCompleteTest extends TestCase
             'Class does not have method merger'
         );
         self::assertTrue(
-            method_exists(SortComplete::class, 'quick'),
-            'Class does not have method quick'
+            method_exists(SortComplete::class, 'quick1'),
+            'Class does not have method quick1'
+        );
+        self::assertTrue(
+            method_exists(SortComplete::class, 'quick2'),
+            'Class does not have method quick2'
         );
         self::assertTrue(
             method_exists(SortComplete::class, 'radix'),
@@ -82,9 +86,15 @@ final class SortCompleteTest extends TestCase
         self::assertSame($this->sorted, SortComplete::merge($this->input));
     }
 
-    public function testQuickSort(): void
+    public function testQuick1Sort(): void
     {
-        self::assertSame($this->sorted, SortComplete::quick($this->input));
+        self::assertSame($this->sorted, SortComplete::quick1($this->input));
+    }
+
+    public function testQuick2Sort(): void
+    {
+        SortComplete::quick2($this->input);
+        self::assertSame($this->sorted, $this->input);
     }
 
     public function testRadixSort(): void
