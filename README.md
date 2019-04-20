@@ -9,6 +9,8 @@ If you are stuck don't be afraid to search online for a pseudo-code algorithm or
 
 Also check out the tests and see what results are expected. Playing around with [Xdebug](https://xdebug.org/) is a plus.
 
+It is useful to actually see how algorithms manipulate data. [Visualgo](https://visualgo.net/en) is a good resource for that.
+
 ## Install
 
 1. Clone this repository.
