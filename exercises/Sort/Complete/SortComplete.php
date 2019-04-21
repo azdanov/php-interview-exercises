@@ -4,11 +4,17 @@ declare(strict_types=1);
 
 namespace Exercises\Sort\Complete;
 
+use function abs;
+use function array_fill;
 use function array_merge;
 use function array_shift;
 use function array_slice;
 use function count;
+use function floor;
 use function intdiv;
+use function log10;
+use function max;
+use function range;
 
 final class SortComplete
 {
@@ -155,13 +161,51 @@ final class SortComplete
     }
 
     /**
+     * Only for unsigned integers from 0 to n.
+     *
      * @param mixed[] $input
      *
      * @return mixed[]
      */
     public static function radix(array $input): array
     {
+        $digitsMax = self::mostDigits($input);
+
+        foreach (range(0, $digitsMax) as $i) {
+            $bucket = array_fill(0, 10, []);
+            foreach ($input as $item) {
+                $digit = self::getDigit($item, $i);
+                $bucket[$digit][] = $item;
+            }
+            $input = array_merge(...$bucket);
+        }
+
         return $input;
+    }
+
+    /** @param int[] $input */
+    private static function mostDigits(array $input): int
+    {
+        $maxDigits = 0;
+        foreach ($input as $iValue) {
+            $maxDigits = max($maxDigits, self::digitCount($iValue));
+        }
+
+        return $maxDigits;
+    }
+
+    private static function digitCount(int $value): int
+    {
+        if ($value === 0) {
+            return 1;
+        }
+
+        return (int) floor(log10(abs($value))) + 1;
+    }
+
+    private static function getDigit(int $value, int $position): int
+    {
+        return floor(abs($value) / 10 ** $position) % 10;
     }
 
     /**

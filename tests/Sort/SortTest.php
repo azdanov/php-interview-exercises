@@ -96,6 +96,6 @@ final class SortTest extends TestCase
     public function testRadixSort(): void
     {
         self::markTestSkipped();
-        self::assertSame($this->sorted, Sort::radix($this->input));
+        self::assertSame([ 12, 23, 345, 2345, 5467, 9852 ], Sort::radix([23, 345, 5467, 12, 2345, 9852]));
     }
 }
