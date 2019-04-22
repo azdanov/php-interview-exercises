@@ -46,4 +46,23 @@ final class ArrayGroupCompleteTest extends TestCase
             )
         );
     }
+
+    public function testCanGroupFive2(): void
+    {
+        self::assertSame(
+            [[1, 2, 3], [4, 5]],
+            ArrayGroupComplete::group2([1, 2, 3, 4, 5], 3)
+        );
+    }
+
+    public function testCanGroupFifteen2(): void
+    {
+        self::assertSame(
+            [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15]],
+            ArrayGroupComplete::group2(
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+                5
+            )
+        );
+    }
 }

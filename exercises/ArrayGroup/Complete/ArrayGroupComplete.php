@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Exercises\ArrayGroup\Complete;
 
+use function array_chunk;
 use function array_slice;
 use function count;
 
@@ -47,5 +48,15 @@ final class ArrayGroupComplete
         }
 
         return $grouped;
+    }
+
+    /**
+     * @param array<any> $array
+     *
+     * @return array<any>
+     */
+    public static function group2(array $array, int $size): array
+    {
+        return array_chunk($array, $size);
     }
 }
