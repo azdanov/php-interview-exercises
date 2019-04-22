@@ -56,6 +56,10 @@ This will allow you to write code and be sure that the solution is correct.
 
 This Exercise Counter is made with [Shields IO](https://shields.io/endpoint), [Axios](https://github.com/axios/axios), [GitHub GraphQL](https://developer.github.com/v4/) and [Netlify Functions](https://www.netlify.com/docs/functions/).
 
+## Contributing
+
+Do you have an idea for an exercise or a better solution? Submit a PR!
+
 ## License
 
 [MIT](./LICENSE)
