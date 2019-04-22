@@ -11,9 +11,9 @@ use function count;
 final class ArrayGroupComplete
 {
     /**
-     * @param array<any> $array
+     * @param mixed[] $array
      *
-     * @return array<any>
+     * @return mixed[]
      */
     public static function group(array $array, int $size): array
     {
@@ -27,9 +27,9 @@ final class ArrayGroupComplete
     }
 
     /**
-     * @param array<any> $array
+     * @param mixed[] $array
      *
-     * @return array<any>
+     * @return mixed[]
      */
     public static function group1(array $array, int $size): array
     {
@@ -51,9 +51,9 @@ final class ArrayGroupComplete
     }
 
     /**
-     * @param array<any> $array
+     * @param mixed[] $array
      *
-     * @return array<any>
+     * @return mixed[]
      */
     public static function group2(array $array, int $size): array
     {

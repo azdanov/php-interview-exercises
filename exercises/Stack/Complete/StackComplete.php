@@ -10,7 +10,7 @@ use function count;
 
 final class StackComplete
 {
-    /** @var array<any> */
+    /** @var mixed[] */
     private $queue = [];
 
     /** @param mixed $value */
