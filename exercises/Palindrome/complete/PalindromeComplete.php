@@ -51,4 +51,17 @@ final class PalindromeComplete
 
         return !in_array(false, $isPalindrome, true);
     }
+ 
+    public static function check3(string $string): bool
+    {
+        $reversed = '';
+        $length = strlen($string);
+        for ($i = 0; $i < $length; ++$i) {
+            $reversed = $string[$i] . $reversed;
+        }
+        if($string === $reversed){
+            return true;
+        }
+        return false;
+    }
 }
