@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Exercises\Ladder\Complete;
 
+use const PHP_EOL;
+use function printf;
+use function str_repeat;
 use function strlen;
 
 final class LadderComplete
@@ -15,7 +18,7 @@ final class LadderComplete
             for ($column = 0; $column < $level; ++$column) {
                 $string .= $column <= $row ? '#' : ' ';
             }
-            echo $string;
+            echo $string, PHP_EOL;
         }
     }
 
@@ -27,7 +30,7 @@ final class LadderComplete
 
         $length = strlen($stair);
         if ($level === $length) {
-            echo $stair;
+            echo $stair, PHP_EOL;
             self::print2($level, $row + 1);
 
             return;
@@ -35,5 +38,12 @@ final class LadderComplete
 
         $stair .= $length <= $row ? '#' : ' ';
         self::print2($level, $row, $stair);
+    }
+
+    public static function print3(int $size): void
+    {
+        for ($i = 1; $i <= $size; ++$i) {
+            printf("%- {$size}s" . PHP_EOL, str_repeat('#', $i));
+        }
     }
 }
