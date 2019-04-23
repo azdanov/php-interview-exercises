@@ -82,4 +82,73 @@ final class BinarySearchTreeCompleteTest extends TestCase
 
         self::assertFalse(BinarySearchTreeComplete::validate($node));
     }
+
+    /**
+     *         10
+     *        /  \
+     *       5    15
+     *      /      \
+     *     0        20
+     *   /   \
+     * -5     3.
+     */
+    public function testDepthFirstInOrder(): void
+    {
+        $node = new BinarySearchTreeComplete(10);
+
+        $node->insert(5);
+        $node->insert(15);
+        $node->insert(20);
+        $node->insert(0);
+        $node->insert(-5);
+        $node->insert(3);
+
+        self::assertSame([-5, 0, 3, 5, 10, 15, 20], $node->depthFirstInOrder());
+    }
+
+    /**
+     *         10
+     *        /  \
+     *       5    15
+     *      /      \
+     *     0        20
+     *   /   \
+     * -5     3.
+     */
+    public function testDepthFirstPostOrder(): void
+    {
+        $node = new BinarySearchTreeComplete(10);
+
+        $node->insert(5);
+        $node->insert(15);
+        $node->insert(20);
+        $node->insert(0);
+        $node->insert(-5);
+        $node->insert(3);
+
+        self::assertSame([-5, 3, 0, 5, 20, 15, 10], $node->depthFirstPostOrder());
+    }
+
+    /**
+     *         10
+     *        /  \
+     *       5    15
+     *      /      \
+     *     0        20
+     *   /   \
+     * -5     3.
+     */
+    public function testDepthFirstPreOrder(): void
+    {
+        $node = new BinarySearchTreeComplete(10);
+
+        $node->insert(5);
+        $node->insert(15);
+        $node->insert(20);
+        $node->insert(0);
+        $node->insert(-5);
+        $node->insert(3);
+
+        self::assertSame([10, 5, 0, -5, 3, 15, 20], $node->depthFirstPreOrder());
+    }
 }

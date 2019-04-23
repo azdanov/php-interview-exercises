@@ -80,4 +80,82 @@ final class BinarySearchTreeComplete
 
         return null;
     }
+
+    /** @return mixed[] */
+    public function depthFirstInOrder(): array
+    {
+        $data = [];
+
+        self::traverseInOrder($this, static function (self $node) use (&$data): void {
+            $data[] = $node->data;
+        });
+
+        return $data;
+    }
+
+    /** @return mixed[] */
+    public function depthFirstPostOrder(): array
+    {
+        $data = [];
+
+        self::traversePostOrder($this, static function (self $node) use (&$data): void {
+            $data[] = $node->data;
+        });
+
+        return $data;
+    }
+
+    /** @return mixed[] */
+    public function depthFirstPreOrder(): array
+    {
+        $data = [];
+
+        self::traversePreOrder($this, static function (self $node) use (&$data): void {
+            $data[] = $node->data;
+        });
+
+        return $data;
+    }
+
+    /** @param mixed[] $node */
+    private static function traverseInOrder(self $node, callable $cb): void
+    {
+        if ($node->left) {
+            self::traverseInOrder($node->left, $cb);
+        }
+
+        $cb($node);
+
+        if ($node->right) {
+            self::traverseInOrder($node->right, $cb);
+        }
+    }
+
+    /** @param mixed[] $node */
+    private static function traversePostOrder(self $node, callable $cb): void
+    {
+        if ($node->left) {
+            self::traversePostOrder($node->left, $cb);
+        }
+
+        if ($node->right) {
+            self::traversePostOrder($node->right, $cb);
+        }
+
+        $cb($node);
+    }
+
+    /** @param mixed[] $node */
+    private static function traversePreOrder(self $node, callable $cb): void
+    {
+        $cb($node);
+
+        if ($node->left) {
+            self::traversePreOrder($node->left, $cb);
+        }
+
+        if ($node->right) {
+            self::traversePreOrder($node->right, $cb);
+        }
+    }
 }
