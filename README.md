@@ -24,6 +24,18 @@ It is useful to actually see how algorithms manipulate data. [Visualgo](https://
 
 This will allow you to write code and be sure that the solution is correct.
 
+## Problem Solving Patterns
+
+To solve certain problems in the most efficient way many [algorithmic patterns](https://cs.lmu.edu/~ray/notes/algpatterns/) are available.
+Such as:
+- Frequency Counter
+- Multiple Pointers
+- Sliding Window
+- Divide and Conquer
+- Backtracking
+
+And more...
+
 ## Suggested Path
 
 - [FizzBuzz](./exercises/FizzBuzz/FizzBuzz.php)
