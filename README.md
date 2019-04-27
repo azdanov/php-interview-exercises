@@ -1,4 +1,5 @@
 # PHP Interview Exercises · [![Build Status](https://img.shields.io/travis/com/azdanov/php-interview-exercises/master.svg?logo=travis)](https://travis-ci.com/azdanov/php-interview-exercises) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg?logo=github)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?logo=read-the-docs&logoColor=white)](https://github.com/azdanov/questions/blob/master/LICENSE) [![Exercise Count](https://img.shields.io/endpoint.svg?url=https://php-interview-questions-counter.netlify.com/.netlify/functions/count)](./exercises)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 A number of exercises to practice whiteboard interview questions in PHP.
 
@@ -75,3 +76,15 @@ Do you have an idea for an exercise or a better solution? Submit a PR!
 ## License
 
 [MIT](./LICENSE)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/Ahmed-Aboud"><img src="https://avatars0.githubusercontent.com/u/25877831?v=4" width="100px;" alt="ahmed"/><br /><sub><b>ahmed</b></sub></a><br /><a href="https://github.com/azdanov/php-interview-exercises/commits?author=Ahmed-Aboud" title="Tests">⚠️</a> <a href="https://github.com/azdanov/php-interview-exercises/commits?author=Ahmed-Aboud" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
