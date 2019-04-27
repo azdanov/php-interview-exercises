@@ -6,7 +6,6 @@ namespace Exercises\MaxHeap\Complete;
 
 use function count;
 use function floor;
-use function intdiv;
 
 final class MaxHeapComplete
 {
