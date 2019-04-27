@@ -62,6 +62,7 @@ And more...
 - [LinkedList](./exercises/LinkedList/LinkedList.php)
 - [Tree](./exercises/Tree/Tree.php)
 - [BinarySearchTree](./exercises/BinarySearchTree/BinarySearchTree.php)
+- [MaxHeap](./exercises/MaxHeap/MaxHeap.php)
 
 ## Aside
 
