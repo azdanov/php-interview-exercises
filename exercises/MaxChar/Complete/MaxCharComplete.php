@@ -34,4 +34,21 @@ final class MaxCharComplete
 
         return (string) $max;
     }
+    
+    public static function get1(string $string): string
+    {
+        $array = [];
+           for ($i = 0; $i < strlen($string); ++$i) {
+
+                if(isset($array[$string[$i]])){
+                    $array[$string[$i]]++;
+              }else{
+                $array[$string[$i]] = 1;
+                }
+              }
+
+        arsort($array);
+        $max = array_keys($array)[0];
+        return (string) $max;
+    }
 }
