@@ -20,6 +20,8 @@ namespace Exercises\Tree;
  * ===
  *  [1, 3, 2]
  *
+ * @see http://courses.cs.vt.edu/~cs2604/spring02/Notes/C04.GeneralBinaryTrees.pdf
+ *
  * @property Node|null $root
  * @method void traverseBreadthFirst(callable $callback)
  * @method void traverseDepthFirst(callable $callback)

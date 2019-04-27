@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Exercises\BinarySearchTree;
 
 /**
+ * Implement a Binary Search Tree.
+ *
+ * @see http://courses.cs.vt.edu/~cs2604/spring02/Notes/C05.BinarySearchTrees.pdf
+ *
  * @property mixed data is set in the constructor
  * @property self|null left is initially null
  * @property self|null right is initially null
