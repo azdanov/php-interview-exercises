@@ -113,8 +113,8 @@ final class PalindromeCompleteTest extends TestCase
     {
         self::assertTrue(PalindromeComplete::check2('deified'));
     }
-    
-     public function testDeifiedIsAPalindrome3(): void
+
+    public function testDeifiedIsAPalindrome3(): void
     {
         self::assertTrue(PalindromeComplete::check3('deified'));
     }
