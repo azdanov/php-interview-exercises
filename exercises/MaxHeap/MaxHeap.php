@@ -11,6 +11,7 @@ namespace Exercises\MaxHeap;
  *
  * @property mixed[] values
  * @method void insert(mixed $value)
+ * @method mixed extractMax()
  */
 final class MaxHeap
 {
