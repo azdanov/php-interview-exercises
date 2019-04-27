@@ -35,7 +35,7 @@ final class MaxCharComplete
         return (string) $max;
     }
     
-    public static function get(string $string): string
+    public static function get1(string $string): string
     {
         $array = [];
            for ($i = 0; $i < strlen($string); ++$i) {
