@@ -48,18 +48,22 @@ final class VowelsCompleteTest extends TestCase
     {
         self::assertSame(0, VowelsComplete::count2('bcdfghjkl'));
     }
+
     public function testCanCount3(): void
     {
         self::assertSame(5, VowelsComplete::count3('abcdefghijklmnopqrstuvwxyz'));
     }
+
     public function testCanCountAllUpper3(): void
     {
         self::assertSame(5, VowelsComplete::count3('AEIOU'));
     }
+
     public function testCanCountOnly3(): void
     {
         self::assertSame(5, VowelsComplete::count3('aeiou'));
     }
+
     public function testCanCountNone3(): void
     {
         self::assertSame(0, VowelsComplete::count3('bcdfghjkl'));
