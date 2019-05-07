@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Queue;
+namespace Tests\QueueFromStack;
 
 use Exercises\QueueFromStacks\QueueFromStacks;
 use PHPUnit\Framework\TestCase;

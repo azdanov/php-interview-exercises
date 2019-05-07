@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\ArrayGroup;
 
 use Exercises\ArrayGroup\ArrayGroup;
 use PHPUnit\Framework\TestCase;

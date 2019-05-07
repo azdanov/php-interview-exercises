@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\Anagram;
 
 use Exercises\Anagram\Anagram;
 use PHPUnit\Framework\TestCase;

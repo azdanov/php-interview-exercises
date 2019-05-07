@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\Pyramid;
 
 use Exercises\Pyramid\Complete\PyramidComplete;
 use PHPUnit\Framework\TestCase;

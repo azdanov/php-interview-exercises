@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Stack;
+namespace Tests\Stack\Complete;
 
 use Exercises\Stack\Complete\StackComplete;
 use PHPUnit\Framework\TestCase;

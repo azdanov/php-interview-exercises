@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\Capitalize;
 
 use Exercises\Capitalize\Capitalize;
 use PHPUnit\Framework\TestCase;

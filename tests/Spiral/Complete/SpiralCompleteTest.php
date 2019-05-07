@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\ReverseString;
+namespace Tests\Spiral\Complete;
 
 use Exercises\Spiral\Complete\SpiralComplete;
 use PHPUnit\Framework\TestCase;

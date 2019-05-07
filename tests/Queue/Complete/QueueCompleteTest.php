@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Queue;
+namespace Tests\Queue\Complete;
 
 use Exercises\Queue\Complete\QueueComplete;
 use PHPUnit\Framework\TestCase;

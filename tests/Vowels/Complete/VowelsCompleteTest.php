@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\ReverseString;
+namespace Tests\Vowels;
 
 use Exercises\Vowels\Complete\VowelsComplete;
 use PHPUnit\Framework\TestCase;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\Fibonacci;
 
 use Exercises\Fibonacci\Fibonacci;
 use PHPUnit\Framework\TestCase;

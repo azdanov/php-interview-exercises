@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\Anagram\Complete;
 
 use Exercises\Anagram\Complete\AnagramComplete;
 use PHPUnit\Framework\TestCase;

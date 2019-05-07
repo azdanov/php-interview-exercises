@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\Ladder;
 
 use Exercises\Ladder\Ladder;
 use PHPUnit\Framework\TestCase;

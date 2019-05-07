@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\MaxChar;
+namespace Tests\FizzBuzz;
 
 use Exercises\FizzBuzz\FizzBuzz;
 use PHPUnit\Framework\TestCase;
