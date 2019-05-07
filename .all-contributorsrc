@@ -25,6 +25,15 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "tizis",
+      "name": "Roman Yepanchenko",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16865573?v=4",
+      "profile": "https://github.com/tizis",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
