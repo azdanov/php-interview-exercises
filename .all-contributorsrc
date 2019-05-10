@@ -34,6 +34,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "fathom",
+      "name": "Fathom",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/13853845?v=4",
+      "profile": "https://github.com/fathom",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
