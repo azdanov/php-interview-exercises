@@ -39,6 +39,36 @@ final class ReverseCompleteTest extends TestCase
         self::assertSame(-21, ReverseComplete::int(-120));
     }
 
+    public function testCanReverseIntZero2(): void
+    {
+        self::assertSame(0, ReverseComplete::int2(0));
+    }
+
+    public function testCanReverseInt2(): void
+    {
+        self::assertSame(21, ReverseComplete::int2(12));
+    }
+
+    public function testCanReverseIntWithThreeDigits2(): void
+    {
+        self::assertSame(321, ReverseComplete::int2(123));
+    }
+
+    public function testCanReverseIntZeros2(): void
+    {
+        self::assertSame(3, ReverseComplete::int2(300));
+    }
+
+    public function testCanReverseIntNegative2(): void
+    {
+        self::assertSame(-21, ReverseComplete::int2(-12));
+    }
+
+    public function testCanReverseIntNegativeWithZeros2(): void
+    {
+        self::assertSame(-21, ReverseComplete::int2(-120));
+    }
+
     public function testCanReverseString1(): void
     {
         self::assertSame('ytrewq', ReverseComplete::string1('qwerty'));
@@ -77,5 +107,15 @@ final class ReverseCompleteTest extends TestCase
     public function testCanReverseStringWithWhitespace4(): void
     {
         self::assertSame('ytr ewq ', ReverseComplete::string4(' qwe rty'));
+    }
+
+    public function testCanReverseString5(): void
+    {
+        self::assertSame('ytrewq', ReverseComplete::string5('qwerty'));
+    }
+
+    public function testCanReverseStringWithWhitespace5(): void
+    {
+        self::assertSame('ytr ewq ', ReverseComplete::string5(' qwe rty'));
     }
 }

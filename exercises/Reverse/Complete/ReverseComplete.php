@@ -42,11 +42,41 @@ final class ReverseComplete
         });
     }
 
+    public static function string5(string $string): string
+    {
+        $revers = '';
+
+        for ($i = mb_strlen($string); $i >= 0; $i--) {
+            $revers .= mb_substr($string, $i, 1);
+        }
+
+        return $revers;
+    }
+
     public static function int(int $number): int
     {
         /** @see https://wiki.php.net/rfc/combined-comparison-operator */
         $sign = $number <=> 0;
 
         return $sign * (int) strrev((string) $number);
+    }
+
+    public static function int2(int $number): int
+    {
+        $revers = 0;
+
+        $sing = $number <=> 0;
+        $number = abs($number);
+
+        $n = (int) log10($number) + 1;
+
+        for ($i = 1; $i <= $n; $i++) {
+            $pow = pow(10, $n - $i);
+            $numeral = (int) ($number / $pow);
+            $number -= $numeral * $pow;
+            $revers += $numeral * pow(10, $i - 1);
+        }
+
+        return $revers * $sing;
     }
 }
