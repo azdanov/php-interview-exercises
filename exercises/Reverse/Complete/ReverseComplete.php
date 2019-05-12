@@ -97,6 +97,7 @@ final class ReverseComplete
             $reverse = ($reverse * 10) + $lastDigit;
             $number = (int) ($number / 10);
         }
+
         return $reverse * $sign;
     }
 }
