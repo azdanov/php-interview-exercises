@@ -70,7 +70,7 @@ final class ReverseComplete
     {
         $revers = 0;
 
-        $sing = $number <=> 0;
+        $sign = $number <=> 0;
         $number = abs($number);
 
         $n = (int) log10($number) + 1;
@@ -82,6 +82,21 @@ final class ReverseComplete
             $revers += $numeral * pow(10, $i - 1);
         }
 
-        return $revers * $sing;
+        return $revers * $sign;
+    }
+
+    public static function int3(int $number): int
+    {
+        $reverse = 0;
+
+        $sign = $number <=> 0;
+        $number = abs($number);
+
+        while ($number > 0) {
+            $lastDigit = $number % 10;
+            $reverse = ($reverse * 10) + $lastDigit;
+            $number = (int) ($number / 10);
+        }
+        return $reverse * $sign;
     }
 }

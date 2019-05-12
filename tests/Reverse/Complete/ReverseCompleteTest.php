@@ -69,6 +69,36 @@ final class ReverseCompleteTest extends TestCase
         self::assertSame(-21, ReverseComplete::int2(-120));
     }
 
+    public function testCanReverseIntZero3(): void
+    {
+        self::assertSame(0, ReverseComplete::int3(0));
+    }
+
+    public function testCanReverseInt3(): void
+    {
+        self::assertSame(21, ReverseComplete::int3(12));
+    }
+
+    public function testCanReverseIntWithThreeDigits3(): void
+    {
+        self::assertSame(321, ReverseComplete::int3(123));
+    }
+
+    public function testCanReverseIntZeros3(): void
+    {
+        self::assertSame(3, ReverseComplete::int3(300));
+    }
+
+    public function testCanReverseIntNegative3(): void
+    {
+        self::assertSame(-21, ReverseComplete::int3(-12));
+    }
+
+    public function testCanReverseIntNegativeWithZeros3(): void
+    {
+        self::assertSame(-21, ReverseComplete::int3(-120));
+    }
+
     public function testCanReverseString1(): void
     {
         self::assertSame('ytrewq', ReverseComplete::string1('qwerty'));
