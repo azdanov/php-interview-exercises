@@ -23,20 +23,20 @@ final class LadderTest extends TestCase
     {
         self::markTestSkipped();
         $this->expectOutputString('#');
-        Pyramid::print(1);
+        Ladder::print(1);
     }
 
     public function testPrintLadder1(): void
     {
         self::markTestSkipped();
         $this->expectOutputString('# ##');
-        Pyramid::print(2);
+        Ladder::print(2);
     }
 
     public function testPrintLadder2(): void
     {
         self::markTestSkipped();
         $this->expectOutputString('#    ##   ###  #### #####');
-        Pyramid::print(5);
+        Ladder::print(5);
     }
 }
