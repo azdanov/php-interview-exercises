@@ -44,6 +44,15 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "Olden",
+      "name": "Alexander Katynia",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/546682?v=4",
+      "profile": "https://github.com/Olden",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
