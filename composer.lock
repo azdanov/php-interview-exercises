@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a058c3c0e0d0eab263f22c57b2637bc8",
+    "content-hash": "9c6522590bd0d9dce9c707861be03b3a",
     "packages": [],
     "packages-dev": [
         {
@@ -1150,16 +1150,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.2.0",
+            "version": "8.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b20b6db4bd6aceda2809ca00cb740149d726d8fb"
+                "reference": "047f771e34dccacb6c432a1a70e9980e087eac92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b20b6db4bd6aceda2809ca00cb740149d726d8fb",
-                "reference": "b20b6db4bd6aceda2809ca00cb740149d726d8fb",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/047f771e34dccacb6c432a1a70e9980e087eac92",
+                "reference": "047f771e34dccacb6c432a1a70e9980e087eac92",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1186,7 @@
                 "sebastian/global-state": "^3.0.0",
                 "sebastian/object-enumerator": "^3.0.3",
                 "sebastian/resource-operations": "^2.0.1",
-                "sebastian/type": "^1.0.0",
+                "sebastian/type": "^1.1.0",
                 "sebastian/version": "^2.0.1"
             },
             "require-dev": {
@@ -1229,7 +1229,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-06-07T04:47:30+00:00"
+            "time": "2019-06-07T14:04:13+00:00"
         },
         {
             "name": "react/event-loop",
@@ -1847,16 +1847,16 @@
         },
         {
             "name": "sebastian/type",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "c2362deb2d0b708abe0c4a6d35633c19ae40cd4a"
+                "reference": "79fd7f2f8acff994d4a330bb434b09b813479068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/c2362deb2d0b708abe0c4a6d35633c19ae40cd4a",
-                "reference": "c2362deb2d0b708abe0c4a6d35633c19ae40cd4a",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/79fd7f2f8acff994d4a330bb434b09b813479068",
+                "reference": "79fd7f2f8acff994d4a330bb434b09b813479068",
                 "shasum": ""
             },
             "require": {
@@ -1868,12 +1868,15 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
                 "classmap": [
                     "src/"
+                ],
+                "files": [
+                    "tests/_fixture/callback_function.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1889,7 +1892,7 @@
             ],
             "description": "Collection of value objects that represent the types of the PHP type system",
             "homepage": "https://github.com/sebastianbergmann/type",
-            "time": "2019-06-06T11:58:04+00:00"
+            "time": "2019-06-07T09:58:20+00:00"
         },
         {
             "name": "sebastian/version",
