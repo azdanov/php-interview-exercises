@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b6dbca559e2b04a13a177ed57296c7f",
+    "content-hash": "ce46ac6e1688446aa86957b880e722e6",
     "packages": [],
     "packages-dev": [
         {
@@ -1218,8 +1218,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -1985,29 +1985,29 @@
         },
         {
             "name": "spatie/phpunit-watcher",
-            "version": "1.10.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/phpunit-watcher.git",
-                "reference": "7b8d7604ebf1ced0299f5258ea7b5019f2215b29"
+                "reference": "dc227698a4168ec77486452e5886d64e21080411"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/phpunit-watcher/zipball/7b8d7604ebf1ced0299f5258ea7b5019f2215b29",
-                "reference": "7b8d7604ebf1ced0299f5258ea7b5019f2215b29",
+                "url": "https://api.github.com/repos/spatie/phpunit-watcher/zipball/dc227698a4168ec77486452e5886d64e21080411",
+                "reference": "dc227698a4168ec77486452e5886d64e21080411",
                 "shasum": ""
             },
             "require": {
                 "clue/stdio-react": "^2.0",
                 "jolicode/jolinotif": "^2.0",
-                "php": "^7.1",
-                "symfony/console": "^3.0|^4.0",
-                "symfony/process": "^3.0|^4.0",
-                "symfony/yaml": "^3.0|^4.0",
+                "php": "^7.2",
+                "symfony/console": "^4.0",
+                "symfony/process": "^4.0",
+                "symfony/yaml": "^4.0",
                 "yosymfony/resource-watcher": "^1.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.0|^7.0"
+                "phpunit/phpunit": "^8.0"
             },
             "bin": [
                 "phpunit-watcher"
@@ -2025,9 +2025,9 @@
             "authors": [
                 {
                     "name": "Freek Van der Herten",
+                    "role": "Developer",
                     "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "homepage": "https://spatie.be"
                 }
             ],
             "description": "Automatically rerun PHPUnit tests when source code changes",
@@ -2036,7 +2036,7 @@
                 "phpunit-watcher",
                 "spatie"
             ],
-            "time": "2019-07-19T06:41:56+00:00"
+            "time": "2019-07-22T13:06:46+00:00"
         },
         {
             "name": "symfony/console",
