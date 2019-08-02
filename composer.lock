@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f5ad2443138bfb8e4549738f82b4366",
+    "content-hash": "949a19fa0837fb5208922bd97f698da3",
     "packages": [],
     "packages-dev": [
         {
@@ -997,8 +997,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "FilterIterator implementation that filters files based on a list of suffixes.",
@@ -1039,8 +1039,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Simple template engine.",
@@ -1088,8 +1088,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Utility class for timing",
@@ -1150,16 +1150,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.3.0",
+            "version": "8.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c5153162ec8f31d632ad72eb99a7c3c1e69f87e9"
+                "reference": "21461ce5b162d0f1a0fa658e27f975517c5d4234"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c5153162ec8f31d632ad72eb99a7c3c1e69f87e9",
-                "reference": "c5153162ec8f31d632ad72eb99a7c3c1e69f87e9",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/21461ce5b162d0f1a0fa658e27f975517c5d4234",
+                "reference": "21461ce5b162d0f1a0fa658e27f975517c5d4234",
                 "shasum": ""
             },
             "require": {
@@ -1229,7 +1229,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-08-02T05:00:37+00:00"
+            "time": "2019-08-02T07:54:25+00:00"
         },
         {
             "name": "psr/container",
@@ -1932,8 +1932,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Collection of value objects that represent the types of the PHP type system",
@@ -1975,8 +1975,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
