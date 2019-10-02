@@ -28,6 +28,7 @@ abstract class MainFilterAbstract
   public function setSuccessor(MainFilterAbstract $succesor = null)
   {
      $this->_successor = $succesor;
+     return $this;
   }
 
   /**

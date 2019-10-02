@@ -13,7 +13,7 @@ require __DIR__.'/../../vendor/autoload.php';
  *          echo $mainFilter.filter(12); 24
 */
 
-use  Exercises\ChainResponsabilityPattern\Complete\DoubleFilter;
+use  Exercises\ChainResponsabilityPattern\Complete\MultipleFilter;
 use  Exercises\ChainResponsabilityPattern\Complete\UpperCaseFilter;
 
 /**
@@ -22,8 +22,9 @@ use  Exercises\ChainResponsabilityPattern\Complete\UpperCaseFilter;
  */
 
 $upperCaseFilter = new UpperCaseFilter();
-$myFilter = new DoubleFilter();
-$myFilter->setSuccessor($upperCaseFilter);
+$myFilter = new MultipleFilter();
+$myFilter->setSuccessor($upperCaseFilter)
+         ->setMultiple(5);
 
 $space = ' ';
 

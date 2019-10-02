@@ -4,33 +4,35 @@ declare(strict_types=1);
 
 namespace Tests\ChainResponsabilityPattern\Complete;
 
-use Exercises\ChainResponsabilityPattern\Complete\UpperCaseFilter;
+use Exercises\ChainResponsabilityPattern\Complete\DoubleFilter;
 use PHPUnit\Framework\TestCase;
 
 final class UpperCaseFilterTest extends TestCase
 {
     /**
-     * @dataProvider getContentString
+     * @dataProvider getContent
      *
-     * @param string $content
+     * @param int|double $content
      * @return void
      */
-    public function testDoFilterUpperCaseStringWords(string $content): void
+    public function testDoFilterDouble($content): void
     {
-        $upperCaseFilter = new UpperCaseFilter();
-        self::assertSame(strtoupper($content), $upperCaseFilter->doFilter($content));
+        $doubleFilter = new DoubleFilter();
+        $double = 2 * $content;
+        self::assertSame($double $upperCaseFilter->doFilter($content));
     }
 
     /**
      *
      * @return array
      */
-    public function getContentString(): array
+    public function getContent(): array
     {
         return [
-            ['lowercase'],
-            ['MixUpperAndLower'],
-            ['string#/'],
+            [99999999999999],
+            [9.6],
+            [12],
+            [0]
         ];
     }
 
