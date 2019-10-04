@@ -39,7 +39,6 @@ abstract class MainFilterAbstract
    */
   public function filter($content)
   {
-
     $result = $this->doFilter($content);
 
     if ($this->_successor) { 

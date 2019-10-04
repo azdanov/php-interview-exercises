@@ -36,13 +36,11 @@ class MultipleFilter extends MainFilterAbstract
     public function doFilter($content = null)
     {
        $contentFilter = filter_var($content, FILTER_VALIDATE_INT);
+       
        if($contentFilter !== false)
-       {
+       {  
            return $content * $this->multiple;
        }
        return $content;
     }
-
-
-   
 }

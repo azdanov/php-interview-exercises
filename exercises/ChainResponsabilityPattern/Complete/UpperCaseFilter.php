@@ -2,6 +2,9 @@
 
 namespace Exercises\ChainResponsabilityPattern\Complete;
 
+use function is_string;
+use function strtoupper;
+
 class UpperCaseFilter extends MainFilterAbstract
 {
 

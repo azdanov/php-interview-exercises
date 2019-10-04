@@ -31,3 +31,4 @@ $space = ' ';
 echo $myFilter->filter('hello') . $space;
 echo $myFilter->filter('24') . $space;
 echo $myFilter->filter(360) . $space;
+echo $myFilter->filter(0) . $space;
