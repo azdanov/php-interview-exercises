@@ -53,6 +53,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "kevin-schmitt",
+      "name": "kevin-schmitt",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/10809414?v=4",
+      "profile": "https://github.com/kevin-schmitt",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
