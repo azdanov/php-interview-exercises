@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "200f6da3eccdbd6c390e4ab45f71846a",
+    "content-hash": "4f418a6166e67c9724b63fe28e3b8a7a",
     "packages": [],
     "packages-dev": [
         {
@@ -1983,16 +1983,16 @@
         },
         {
             "name": "spatie/phpunit-watcher",
-            "version": "1.21.3",
+            "version": "1.21.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/phpunit-watcher.git",
-                "reference": "ca9033fb7478a49105a67361fb861e88817d4be2"
+                "reference": "39f35dd7f629c52058d14b554adabf159d40c6de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/phpunit-watcher/zipball/ca9033fb7478a49105a67361fb861e88817d4be2",
-                "reference": "ca9033fb7478a49105a67361fb861e88817d4be2",
+                "url": "https://api.github.com/repos/spatie/phpunit-watcher/zipball/39f35dd7f629c52058d14b554adabf159d40c6de",
+                "reference": "39f35dd7f629c52058d14b554adabf159d40c6de",
                 "shasum": ""
             },
             "require": {
@@ -2003,6 +2003,9 @@
                 "symfony/process": "^4.0|^5.0",
                 "symfony/yaml": "^4.0|^5.0",
                 "yosymfony/resource-watcher": "^2.0"
+            },
+            "conflict": {
+                "yosymfony/resource-watcher": "<2.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.0"
@@ -2034,7 +2037,7 @@
                 "phpunit-watcher",
                 "spatie"
             ],
-            "time": "2019-12-02T07:58:44+00:00"
+            "time": "2019-12-04T08:14:29+00:00"
         },
         {
             "name": "symfony/console",
