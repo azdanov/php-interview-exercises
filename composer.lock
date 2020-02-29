@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea01fabab225869f6ad25791961a576a",
+    "content-hash": "eba222e44e03dda1719ab6b7be1adacc",
     "packages": [],
     "packages-dev": [
         {
@@ -224,16 +224,16 @@
         },
         {
             "name": "codedungeon/php-cli-colors",
-            "version": "1.10.7",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikeerickson/php-cli-colors.git",
-                "reference": "5649ef76ec0c9ed626e95bf40fdfaf4b8efcf79b"
+                "reference": "9f60ac692cc790755dad47b01c1d607fe5f43b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikeerickson/php-cli-colors/zipball/5649ef76ec0c9ed626e95bf40fdfaf4b8efcf79b",
-                "reference": "5649ef76ec0c9ed626e95bf40fdfaf4b8efcf79b",
+                "url": "https://api.github.com/repos/mikeerickson/php-cli-colors/zipball/9f60ac692cc790755dad47b01c1d607fe5f43b94",
+                "reference": "9f60ac692cc790755dad47b01c1d607fe5f43b94",
                 "shasum": ""
             },
             "require-dev": {
@@ -264,20 +264,20 @@
                 "package",
                 "php"
             ],
-            "time": "2018-05-17T01:34:14+00:00"
+            "time": "2019-12-29T22:29:29+00:00"
         },
         {
             "name": "codedungeon/phpunit-result-printer",
-            "version": "0.26.2",
+            "version": "0.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikeerickson/phpunit-pretty-result-printer.git",
-                "reference": "89f1664579d8732e987bf5db1f689dab39d19d36"
+                "reference": "b1321647ef3eacfb145fcc9559483b22d0c86cfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/89f1664579d8732e987bf5db1f689dab39d19d36",
-                "reference": "89f1664579d8732e987bf5db1f689dab39d19d36",
+                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/b1321647ef3eacfb145fcc9559483b22d0c86cfe",
+                "reference": "b1321647ef3eacfb145fcc9559483b22d0c86cfe",
                 "shasum": ""
             },
             "require": {
@@ -285,7 +285,7 @@
                 "codedungeon/php-cli-colors": "^1.10.2",
                 "hassankhan/config": "^0.11.2",
                 "php": "^7.1",
-                "phpunit/phpunit": "^8.0",
+                "phpunit/phpunit": "^8.0|^9.0",
                 "symfony/yaml": "^2.7|^3.0|^4.0"
             },
             "require-dev": {
@@ -317,7 +317,7 @@
                 "result-printer",
                 "testing"
             ],
-            "time": "2019-04-02T17:06:04+00:00"
+            "time": "2020-02-29T21:59:20+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -2167,16 +2167,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.13.1",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3"
+                "reference": "fbdeaec0df06cf3d51c93de80c7eb76e271f5a38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
-                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/fbdeaec0df06cf3d51c93de80c7eb76e271f5a38",
+                "reference": "fbdeaec0df06cf3d51c93de80c7eb76e271f5a38",
                 "shasum": ""
             },
             "require": {
@@ -2188,7 +2188,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.13-dev"
+                    "dev-master": "1.14-dev"
                 }
             },
             "autoload": {
@@ -2221,7 +2221,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2019-11-27T13:56:44+00:00"
+            "time": "2020-01-13T11:15:53+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2449,16 +2449,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.4.2",
+            "version": "v4.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "a08832b974dd5fafe3085a66d41fe4c84bb2628c"
+                "reference": "94d005c176db2080e98825d98e01e8b311a97a88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/a08832b974dd5fafe3085a66d41fe4c84bb2628c",
-                "reference": "a08832b974dd5fafe3085a66d41fe4c84bb2628c",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/94d005c176db2080e98825d98e01e8b311a97a88",
+                "reference": "94d005c176db2080e98825d98e01e8b311a97a88",
                 "shasum": ""
             },
             "require": {
@@ -2504,7 +2504,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-12-10T10:33:21+00:00"
+            "time": "2020-02-03T10:46:43+00:00"
         },
         {
             "name": "theseer/tokenizer",
