@@ -12,7 +12,7 @@
   "require": {},
   "require-dev": {
     "codedungeon/phpunit-result-printer": "0.27.0",
-    "phpunit/phpunit": "8.5.2",
+    "phpunit/phpunit": "9.0.1",
     "spatie/phpunit-watcher": "1.22.0"
   },
   "autoload": {
