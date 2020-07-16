@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 final class SinglyLinkedListTest extends TestCase
 {
-    private SinglyLinkedList $list;
+    private $list;
 
     protected function setUp(): void
     {

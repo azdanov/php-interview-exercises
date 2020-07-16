@@ -5,9 +5,9 @@ namespace Exercises\SinglyLinkedList\Complete;
 
 final class NodeComplete {
 
-  private string $data;
+  private $data;
 
-  private ?NodeComplete $link = null;
+  private $link = null;
 
   public function __construct(string $data)
   {

@@ -7,8 +7,8 @@ use Exercises\SinglyLinkedList\Complete\NodeComplete;
 
 final class SinglyLinkedListComplete
 {
-    private ?NodeComplete $head = null;
-    private ?NodeComplete $last = null;
+    private $head = null;
+    private $last = null;
 
     public function add(NodeComplete $node): void
     {
