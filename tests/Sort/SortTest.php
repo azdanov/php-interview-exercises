@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\Sort;
 
-use Exercises\Sort\Sort;
 use PHPUnit\Framework\TestCase;
 use ReflectionException;
 use Tests\GetReflectionMethod;
