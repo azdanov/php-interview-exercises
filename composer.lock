@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a51389e9e4074881d949cf98faa1c248",
+    "content-hash": "8794959c863058a4598d5adde3f6369b",
     "packages": [],
     "packages-dev": [
         {
@@ -268,16 +268,16 @@
         },
         {
             "name": "codedungeon/phpunit-result-printer",
-            "version": "0.29.0",
+            "version": "0.29.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikeerickson/phpunit-pretty-result-printer.git",
-                "reference": "03057304968193301e2c6b78a622f2be4d87f7bc"
+                "reference": "65075c1f92cd47c64f850bcab567e33e6cd0475f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/03057304968193301e2c6b78a622f2be4d87f7bc",
-                "reference": "03057304968193301e2c6b78a622f2be4d87f7bc",
+                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/65075c1f92cd47c64f850bcab567e33e6cd0475f",
+                "reference": "65075c1f92cd47c64f850bcab567e33e6cd0475f",
                 "shasum": ""
             },
             "require": {
@@ -316,7 +316,7 @@
                 "result-printer",
                 "testing"
             ],
-            "time": "2020-09-13T18:18:55+00:00"
+            "time": "2020-09-13T23:26:30+00:00"
         },
         {
             "name": "doctrine/instantiator",
