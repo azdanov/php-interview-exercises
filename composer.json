@@ -11,7 +11,7 @@
   ],
   "require": {},
   "require-dev": {
-    "codedungeon/phpunit-result-printer": "0.29.3",
+    "codedungeon/phpunit-result-printer": "0.30.0",
     "phpunit/phpunit": "9.4.4",
     "spatie/phpunit-watcher": "1.23.1"
   },
