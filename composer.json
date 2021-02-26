@@ -13,7 +13,7 @@
   "require-dev": {
     "codedungeon/phpunit-result-printer": "0.30.1",
     "phpunit/phpunit": "9.5.2",
-    "spatie/phpunit-watcher": "1.23.1"
+    "spatie/phpunit-watcher": "1.23.2"
   },
   "autoload": {
     "psr-4": {
