@@ -65,4 +65,11 @@ final class PalindromeComplete
 
         return false;
     }
+
+    public static function check4(string $str): bool
+    {
+        $middle = (int)ceil(strlen($str) / 2);
+
+        return substr($str, 0, $middle) === strrev(substr($str, -$middle));
+    }
 }
