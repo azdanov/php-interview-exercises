@@ -32,28 +32,4 @@ final class MaxSubArraySumComplete
 
         return $max;
     }
-
-    /** @param int[] $input */
-    public static function max2(array $input, int $n): int
-    {
-        $length = count($input);
-        if ($length < $n) {
-            return 0;
-        }
-        $maxSum = 0;
-        $tempSum = 0;
-
-        for ($i = 0; $i < $n; ++$i) {
-            $maxSum += $input[$i];
-        }
-
-        $tempSum = $maxSum;
-
-        for ($i = $n; $i < $length; ++$i) {
-            $tempSum = ($tempSum - $input[$i - $n] + $input[$i]);
-            $maxSum = max($maxSum, $tempSum);
-        }
-
-        return $maxSum;
-    }
 }
