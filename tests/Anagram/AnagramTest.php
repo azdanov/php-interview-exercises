@@ -36,4 +36,16 @@ final class AnagramTest extends TestCase
         self::markTestSkipped();
         self::assertFalse(Anagram::check('roast beef', 'goat roast'));
     }
+
+    public function testCanCheckStringPunctuation(): void
+    {
+        self::markTestSkipped();
+        self::assertTrue(Anagram::check('Elv.is', 'lives'));
+    }
+
+    public function testCanCheckStringWhitespace(): void
+    {
+        self::markTestSkipped();
+        self::assertTrue(Anagram::check('El vis', 'lives'));
+    }
 }

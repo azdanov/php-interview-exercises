@@ -23,4 +23,14 @@ final class AnagramCompleteTest extends TestCase
     {
         self::assertFalse(AnagramComplete::check('roast beef', 'goat roast'));
     }
+
+    public function testCanCheckStringPunctuation(): void
+    {
+        self::assertTrue(AnagramComplete::check('Elv.is', 'lives'));
+    }
+
+    public function testCanCheckStringWhitespace(): void
+    {
+        self::assertTrue(AnagramComplete::check('El vis', 'lives'));
+    }
 }
