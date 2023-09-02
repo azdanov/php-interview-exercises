@@ -51,4 +51,13 @@ final class MaxCharComplete
 
         return (string) $max;
     }
+
+    public static function get2(string $string): string
+    {
+        $chars = str_split($string);
+        $count = array_count_values($chars);
+        arsort($count);
+
+        return (string) key($count);
+    }
 }

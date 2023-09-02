@@ -47,4 +47,19 @@ final class MaxCharCompleteTest extends TestCase
     {
         self::assertSame('2', MaxCharComplete::get1('apple 2202'));
     }
+
+    public function testGet2SingleMaxChar(): void
+    {
+        self::assertSame('a', MaxCharComplete::get2('a'));
+    }
+
+    public function testGet2MaxChar(): void
+    {
+        self::assertSame('q', MaxCharComplete::get2('qqweqrty'));
+    }
+
+    public function testGet2MaxCharWithNumbers(): void
+    {
+        self::assertSame('2', MaxCharComplete::get2('apple 2202'));
+    }
 }

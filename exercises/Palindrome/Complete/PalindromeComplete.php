@@ -65,4 +65,9 @@ final class PalindromeComplete
 
         return false;
     }
+
+    public static function check4(string $string): bool
+    {
+        return strrev($string) === $string;
+    }
 }

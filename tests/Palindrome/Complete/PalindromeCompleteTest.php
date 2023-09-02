@@ -148,4 +148,39 @@ final class PalindromeCompleteTest extends TestCase
     {
         self::assertTrue(PalindromeComplete::check3('deified'));
     }
+
+    public function testFafIsPalindrome4(): void
+    {
+        self::assertTrue(PalindromeComplete::check4('faf'));
+    }
+
+    public function testFafSpaceIsNotAPalindrome4(): void
+    {
+        self::assertFalse(PalindromeComplete::check4('faf '));
+    }
+
+    public function testSpaceFafIsNotAPalindrome4(): void
+    {
+        self::assertFalse(PalindromeComplete::check4(' faf'));
+    }
+
+    public function testHelloIsNotAPalindrome4(): void
+    {
+        self::assertFalse(PalindromeComplete::check4('hello'));
+    }
+
+    public function test11211IsAPalindrome4(): void
+    {
+        self::assertTrue(PalindromeComplete::check4('11211'));
+    }
+
+    public function testDogSpaceGodIsNotAPalindrome4(): void
+    {
+        self::assertFalse(PalindromeComplete::check4('Dog god'));
+    }
+
+    public function testDeifiedIsAPalindrome4(): void
+    {
+        self::assertTrue(PalindromeComplete::check4('deified'));
+    }
 }
